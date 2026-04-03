@@ -382,7 +382,7 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
           <div class="savings-row" id="federal-row"><span>Federal tax credit (IRA)</span><span id="federal-amt">up to &#8211;$2,000</span></div>
           <div class="savings-row"><span>Utility rebates</span><span style="color:#9BB0C4;font-weight:500;">Ask your installer</span></div>
         </div>
-        <div class="net-box">
+        <div class="net-box" id="net-box">
           <div class="net-eyebrow">Net estimate after savings</div>
           <div class="net-range" id="net-range"></div>
           <div class="net-note" id="net-note"></div>
@@ -616,13 +616,29 @@ function submitForm(){
 function revealPrice(recKey,priceData){
   var heatPump=recKey==="ducted-heat-pump"||recKey==="ductless-single"||recKey==="ductless-multi";
   var sys=systems[recKey];
+
+  // Ack
+  var rc=safe("reveal-confirm");
+  if(rc)rc.textContent=sys.name+" for a "+(state.sizeLabel||"")+" home in "+state.city+".";
+
+  // Main estimate
   var re=safe("reveal-eyebrow");if(re)re.textContent=sys.name+" — "+state.city+" 2026";
-  var rc=safe("reveal-confirm");if(rc)rc.textContent=sys.name+" for a "+(state.sizeLabel||"")+" home in "+state.city+".";
   var rr=safe("reveal-range");if(rr)rr.textContent=priceData.range;
   var rn=safe("reveal-note");if(rn)rn.textContent="Based on recent installations in Greater Snohomish County — 2026 pricing.";
+
+  // Savings table — only show federal row for heat pumps
   var fr=safe("federal-row");if(fr)fr.style.display=heatPump?"":"none";
-  var nr=safe("net-range");if(nr)nr.textContent=priceData.net;
-  var nn=safe("net-note");if(nn)nn.textContent=heatPump?"After federal tax credit (up to $2,000) — ask about additional utility rebates.":"Ask your installer about available incentives and financing options.";
+
+  // Utility rebates row — always show
+  // Net box — only show if there are actual savings (heat pump only)
+  var netBox=safe("net-box");
+  if(netBox)netBox.style.display=heatPump?"":"none";
+
+  if(heatPump){
+    var nr=safe("net-range");if(nr)nr.textContent=priceData.net;
+    var nn=safe("net-note");if(nn)nn.textContent="After federal tax credit (up to $2,000) — ask your installer about additional utility rebates.";
+  }
+
   var pr=safe("price-reveal");if(pr){pr.classList.add("active");pr.scrollIntoView({behavior:"smooth",block:"start"});}
 }
 
