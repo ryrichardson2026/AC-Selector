@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -186,223 +187,248 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
 <div class="calc-wrap">
   <div class="calc-card" id="calc-card">
 
-    <div class="progress-bar">
-      <div class="prog-seg active" id="seg-1"></div>
-      <div class="prog-seg" id="seg-2"></div>
-      <div class="prog-seg" id="seg-3"></div>
-      <div class="prog-seg" id="seg-4"></div>
-      <div class="prog-seg" id="seg-5"></div>
-      <div class="prog-seg" id="seg-6"></div>
-      <div class="prog-seg" id="seg-7"></div>
-      <div class="prog-label" id="prog-label">Question 1 of 7</div>
+```
+<div class="progress-bar">
+  <div class="prog-seg active" id="seg-1"></div>
+  <div class="prog-seg" id="seg-2"></div>
+  <div class="prog-seg" id="seg-3"></div>
+  <div class="prog-seg" id="seg-4"></div>
+  <div class="prog-seg" id="seg-5"></div>
+  <div class="prog-seg" id="seg-6"></div>
+  <div class="prog-seg" id="seg-7"></div>
+  <div class="prog-label" id="prog-label">Question 1 of 7</div>
+</div>
+
+<div class="step-panel active" id="step-1">
+  <div class="step-body">
+    <div class="step-q">What type of home do you live in?</div>
+    <select class="city-select" id="home-type-select" onchange="pickHomeType(this.value)">
+      <option value="">Select your home type...</option>
+      <option value="single-family">Single family home</option>
+      <option value="condo">Condo or apartment</option>
+      <option value="townhouse">Townhouse</option>
+      <option value="multi-family">Multi-family / duplex</option>
+      <option value="mobile">Mobile or manufactured home</option>
+      <option value="other">Other</option>
+    </select>
+    <div class="city-msg" id="home-type-msg"></div>
+    <div class="step-nav">
+      <button class="btn-continue" id="next-1" disabled onclick="goTo(2)">Continue &#x2192;</button>
     </div>
+  </div>
+</div>
 
-    <div class="step-panel active" id="step-1">
-      <div class="step-body">
-        <div class="step-q">What type of home do you live in?</div>
-        <select class="city-select" id="home-type-select" onchange="pickHomeType(this.value)">
-          <option value="">Select your home type...</option>
-          <option value="single-family">Single family home</option>
-          <option value="condo">Condo or apartment</option>
-          <option value="townhouse">Townhouse</option>
-          <option value="multi-family">Multi-family / duplex</option>
-          <option value="mobile">Mobile or manufactured home</option>
-          <option value="other">Other</option>
-        </select>
-        <div class="city-msg" id="home-type-msg"></div>
-        <div class="step-nav">
-          <button class="btn-continue" id="next-1" disabled onclick="goTo(2)">Continue &#x2192;</button>
-        </div>
+<div class="step-panel" id="step-2">
+  <div class="step-body">
+    <div class="step-q">How much of your home do you want to cool?</div>
+    <div class="options">
+      <button class="opt" onclick="pick(this,2,'one','One room or zone')"><div class="opt-label">One room or zone</div></button>
+      <button class="opt" onclick="pick(this,2,'few','2–3 rooms')"><div class="opt-label">2–3 rooms</div></button>
+      <button class="opt" onclick="pick(this,2,'whole','Whole home')"><div class="opt-label">Whole home</div></button>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goTo(1)">&#x2190; Back</button>
+      <button class="btn-continue" id="next-2" disabled onclick="goTo(3)">Continue &#x2192;</button>
+    </div>
+  </div>
+</div>
+
+<div class="step-panel" id="step-3">
+  <div class="step-body">
+    <div class="step-q">Is your home single or multi-story?</div>
+    <div class="options">
+      <button class="opt" onclick="pick(this,3,'single','Single story')"><div class="opt-label">Single story</div></button>
+      <button class="opt" onclick="pick(this,3,'multi','Two story or more')"><div class="opt-label">Two story or more</div></button>
+      <button class="opt" onclick="pick(this,3,'split','Split level')"><div class="opt-label">Split level</div></button>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goTo(2)">&#x2190; Back</button>
+      <button class="btn-continue" id="next-3" disabled onclick="goTo(4)">Continue &#x2192;</button>
+    </div>
+  </div>
+</div>
+
+<div class="step-panel" id="step-4">
+  <div class="step-body">
+    <div class="step-q">Is there an existing cooling system installed in your home?</div>
+    <div class="options">
+      <button class="opt" onclick="pick(this,4,'yes','Has existing cooling')"><div class="opt-icon">&#x2744;&#xFE0F;</div><div class="opt-label">Yes</div></button>
+      <button class="opt" onclick="pick(this,4,'no','No existing cooling')"><div class="opt-icon">&#x1F321;&#xFE0F;</div><div class="opt-label">No</div></button>
+      <button class="opt" onclick="pick(this,4,'not-sure','Not sure')"><div class="opt-icon">&#x1F937;</div><div class="opt-label">Not sure</div></button>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goTo(3)">&#x2190; Back</button>
+      <button class="btn-continue" id="next-4" disabled onclick="goTo(5)">Continue &#x2192;</button>
+    </div>
+  </div>
+</div>
+
+<div class="step-panel" id="step-5">
+  <div class="step-body">
+    <div class="step-q">How big is your home?</div>
+    <div class="options">
+      <button class="opt" onclick="pick(this,5,'u1500','Under 1,500 sqft')"><div class="opt-icon">&#x1F3E0;</div><div class="opt-label">Under 1,500 sqft</div></button>
+      <button class="opt" onclick="pick(this,5,'1500-2500','1,500–2,500 sqft')"><div class="opt-icon">&#x1F3E1;</div><div class="opt-label">1,500–2,500 sqft</div></button>
+      <button class="opt" onclick="pick(this,5,'2500-3500','2,500–3,500 sqft')"><div class="opt-icon">&#x1F3D8;&#xFE0F;</div><div class="opt-label">2,500–3,500 sqft</div></button>
+      <button class="opt" onclick="pick(this,5,'o3500','Over 3,500 sqft')"><div class="opt-icon">&#x1F3F0;</div><div class="opt-label">Over 3,500 sqft</div></button>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goTo(4)">&#x2190; Back</button>
+      <button class="btn-continue" id="next-5" disabled onclick="goTo(6)">Continue &#x2192;</button>
+    </div>
+  </div>
+</div>
+
+<div class="step-panel" id="step-6">
+  <div class="step-body">
+    <div class="step-q">Does your home have existing ductwork?</div>
+    <div class="options">
+      <button class="opt" onclick="pick(this,6,'yes','Has ductwork')"><div class="opt-label">Yes — has vents throughout</div></button>
+      <button class="opt" onclick="pick(this,6,'no','No ductwork')"><div class="opt-label">No — no existing ductwork</div></button>
+      <button class="opt" onclick="pick(this,6,'not-sure','Not sure')"><div class="opt-label">Not sure</div></button>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goTo(5)">&#x2190; Back</button>
+      <button class="btn-continue" id="next-6" disabled onclick="goTo(7)">Continue &#x2192;</button>
+    </div>
+  </div>
+</div>
+
+<div class="step-panel" id="step-7">
+  <div class="step-body">
+    <div class="step-q">Which city are you in?</div>
+    <select class="city-select" id="city-select" onchange="pickCity(this.value)">
+      <option value="">Select your city...</option>
+      <option>Mill Creek</option><option>Bothell</option><option>Lynnwood</option>
+      <option>Mukilteo</option><option>Kenmore</option><option>Mountlake Terrace</option>
+      <option>Edmonds</option><option>Shoreline</option><option>Woodinville</option>
+      <option>Brier</option><option>Everett</option><option>Marysville</option>
+      <option>Monroe</option><option>Snohomish</option><option>Arlington</option>
+      <option>Lake Stevens</option><option>Martha Lake</option><option>Maltby</option>
+      <option>Other nearby area</option>
+    </select>
+    <div class="city-msg" id="city-msg"></div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goTo(6)">&#x2190; Back</button>
+      <button class="btn-continue" id="next-7" disabled onclick="showLoading()">See Results &#x2192;</button>
+    </div>
+  </div>
+</div>
+
+<div class="loading-panel" id="loading">
+  <div class="loading-msg">Finding the right system for your home...</div>
+  <div class="bar-track"><div class="bar-fill" id="bar-fill"></div></div>
+  <div class="bar-pct" id="bar-pct">0%</div>
+</div>
+
+<div class="result-panel" id="result-panel">
+  <div class="result-intro" id="result-intro"></div>
+  <div class="rec-box">
+    <div class="rec-eyebrow">Our recommendation</div>
+    <div class="rec-system" id="rec-system"></div>
+    <div class="rec-why" id="rec-why"></div>
+  </div>
+  <div class="fit-list" id="fit-list"></div>
+
+  <div class="cta-box" id="cta-box">
+    <div class="cta-q" id="cta-q"></div>
+    <div class="cta-btns">
+      <button class="btn-yes" onclick="showForm()">Unlock My Estimate &#x2192;</button>
+      <button class="btn-no" onclick="showNotYet()">Not yet</button>
+    </div>
+  </div>
+
+  <div class="form-section" id="form-section">
+    <div class="form-title">One step to see your estimate</div>
+    <input type="text" id="h-pot" style="display:none;position:absolute;left:-9999px;" tabindex="-1" autocomplete="off">
+    <div class="form-row">
+      <div>
+        <div class="form-field"><input type="text" id="f-name" placeholder="First name" autocomplete="given-name" oninput="clearErr('f-name')"></div>
+        <div style="font-size:11px;color:#E74C3C;min-height:16px;margin-bottom:4px;" id="f-name-err"></div>
+      </div>
+      <div>
+        <div class="form-field"><input type="email" id="f-email" placeholder="Your email" autocomplete="email" oninput="clearErr('f-email')"></div>
+        <div style="font-size:11px;color:#E74C3C;min-height:16px;margin-bottom:4px;" id="f-email-err"></div>
       </div>
     </div>
-
-    <div class="step-panel" id="step-2">
-      <div class="step-body">
-        <div class="step-q">How much of your home do you want to cool?</div>
-        <div class="options">
-          <button class="opt" onclick="pick(this,2,'one','One room or zone')"><div class="opt-label">One room or zone</div></button>
-          <button class="opt" onclick="pick(this,2,'few','2–3 rooms')"><div class="opt-label">2–3 rooms</div></button>
-          <button class="opt" onclick="pick(this,2,'whole','Whole home')"><div class="opt-label">Whole home</div></button>
-        </div>
-        <div class="step-nav">
-          <button class="btn-back" onclick="goTo(1)">&#x2190; Back</button>
-          <button class="btn-continue" id="next-2" disabled onclick="goTo(3)">Continue &#x2192;</button>
-        </div>
+    <div class="form-row">
+      <div>
+        <div class="form-field"><input type="tel" id="f-phone" placeholder="Phone (10 digits)" autocomplete="tel" inputmode="numeric" oninput="clearErr('f-phone')"></div>
+        <div style="font-size:11px;color:#E74C3C;min-height:16px;margin-bottom:4px;" id="f-phone-err"></div>
+      </div>
+      <div>
+        <div class="form-field"><input type="text" id="f-zip" placeholder="Zip code (starts with 98)" maxlength="5" autocomplete="postal-code" inputmode="numeric" oninput="clearErr('f-zip')"></div>
+        <div style="font-size:11px;color:#E74C3C;min-height:16px;margin-bottom:4px;" id="f-zip-err"></div>
       </div>
     </div>
-
-    <div class="step-panel" id="step-3">
-      <div class="step-body">
-        <div class="step-q">Is your home single or multi-story?</div>
-        <div class="options">
-          <button class="opt" onclick="pick(this,3,'single','Single story')"><div class="opt-label">Single story</div></button>
-          <button class="opt" onclick="pick(this,3,'multi','Two story or more')"><div class="opt-label">Two story or more</div></button>
-          <button class="opt" onclick="pick(this,3,'split','Split level')"><div class="opt-label">Split level</div></button>
-        </div>
-        <div class="step-nav">
-          <button class="btn-back" onclick="goTo(2)">&#x2190; Back</button>
-          <button class="btn-continue" id="next-3" disabled onclick="goTo(4)">Continue &#x2192;</button>
-        </div>
-      </div>
+    <div class="check-wrap">
+      <input type="checkbox" id="f-agree" onchange="toggleSubmit()">
+      <label class="check-label" for="f-agree">By submitting I agree I may be contacted by one local installer about my estimate.</label>
     </div>
+    <button class="btn-submit" id="btn-submit" disabled onclick="submitForm()">Get My Instant Estimate &#x2192;</button>
+  </div>
 
-    <div class="step-panel" id="step-4">
-      <div class="step-body">
-        <div class="step-q">Is there an existing cooling system installed in your home?</div>
-        <div class="options">
-          <button class="opt" onclick="pick(this,4,'yes','Has existing cooling')"><div class="opt-icon">&#x2744;&#xFE0F;</div><div class="opt-label">Yes</div></button>
-          <button class="opt" onclick="pick(this,4,'no','No existing cooling')"><div class="opt-icon">&#x1F321;&#xFE0F;</div><div class="opt-label">No</div></button>
-          <button class="opt" onclick="pick(this,4,'not-sure','Not sure')"><div class="opt-icon">&#x1F937;</div><div class="opt-label">Not sure</div></button>
-        </div>
-        <div class="step-nav">
-          <button class="btn-back" onclick="goTo(3)">&#x2190; Back</button>
-          <button class="btn-continue" id="next-4" disabled onclick="goTo(5)">Continue &#x2192;</button>
-        </div>
-      </div>
+  <div class="price-reveal" id="price-reveal">
+  <div style="background:rgba(39,174,96,0.08);border:1px solid rgba(39,174,96,0.2);border-radius:12px;padding:14px 16px;margin-bottom:14px;">
+    <div style="font-size:14px;font-weight:700;color:#1A6B3A;margin-bottom:2px;">&#10003; Got it — here’s your instant estimate.</div>
+    <div id="reveal-confirm" style="font-size:12px;color:#4A8A5A;line-height:1.5;"></div>
+  </div>
+  
+  
+    <div class="est-box">
+      <div class="est-eyebrow" id="reveal-eyebrow">Installation estimate</div>
+      <div class="est-range" id="reveal-range"></div>
+      <div class="est-note" id="reveal-note"></div>
     </div>
-
-    <div class="step-panel" id="step-5">
-      <div class="step-body">
-        <div class="step-q">How big is your home?</div>
-        <div class="options">
-          <button class="opt" onclick="pick(this,5,'u1500','Under 1,500 sqft')"><div class="opt-icon">&#x1F3E0;</div><div class="opt-label">Under 1,500 sqft</div></button>
-          <button class="opt" onclick="pick(this,5,'1500-2500','1,500–2,500 sqft')"><div class="opt-icon">&#x1F3E1;</div><div class="opt-label">1,500–2,500 sqft</div></button>
-          <button class="opt" onclick="pick(this,5,'2500-3500','2,500–3,500 sqft')"><div class="opt-icon">&#x1F3D8;&#xFE0F;</div><div class="opt-label">2,500–3,500 sqft</div></button>
-          <button class="opt" onclick="pick(this,5,'o3500','Over 3,500 sqft')"><div class="opt-icon">&#x1F3F0;</div><div class="opt-label">Over 3,500 sqft</div></button>
-        </div>
-        <div class="step-nav">
-          <button class="btn-back" onclick="goTo(4)">&#x2190; Back</button>
-          <button class="btn-continue" id="next-5" disabled onclick="goTo(6)">Continue &#x2192;</button>
-        </div>
-      </div>
+    <div class="savings-table">
+      <div class="savings-row" id="federal-row"><span>Federal tax credit (IRA)</span><span id="federal-amt">up to &#8211;$2,000</span></div>
+      <div class="savings-row"><span>Utility rebates</span><span style="color:#9BB0C4;font-weight:500;">Ask your installer</span></div>
     </div>
-
-    <div class="step-panel" id="step-6">
-      <div class="step-body">
-        <div class="step-q">Does your home have existing ductwork?</div>
-        <div class="options">
-          <button class="opt" onclick="pick(this,6,'yes','Has ductwork')"><div class="opt-label">Yes — has vents throughout</div></button>
-          <button class="opt" onclick="pick(this,6,'no','No ductwork')"><div class="opt-label">No — no existing ductwork</div></button>
-          <button class="opt" onclick="pick(this,6,'not-sure','Not sure')"><div class="opt-label">Not sure</div></button>
-        </div>
-        <div class="step-nav">
-          <button class="btn-back" onclick="goTo(5)">&#x2190; Back</button>
-          <button class="btn-continue" id="next-6" disabled onclick="goTo(7)">Continue &#x2192;</button>
-        </div>
-      </div>
+    <div class="net-box" id="net-box">
+      <div class="net-eyebrow">Net estimate after savings</div>
+      <div class="net-range" id="net-range"></div>
+      <div class="net-note" id="net-note"></div>
     </div>
+    <div class="savings-caveat">Federal credit eligibility depends on system type and income. Your installer can confirm during the free estimate.</div>
+  </div>
 
-    <div class="step-panel" id="step-7">
-      <div class="step-body">
-        <div class="step-q">Which city are you in?</div>
-        <select class="city-select" id="city-select" onchange="pickCity(this.value)">
-          <option value="">Select your city...</option>
-          <option>Mill Creek</option><option>Bothell</option><option>Lynnwood</option>
-          <option>Mukilteo</option><option>Kenmore</option><option>Mountlake Terrace</option>
-          <option>Edmonds</option><option>Shoreline</option><option>Woodinville</option>
-          <option>Brier</option><option>Everett</option><option>Marysville</option>
-          <option>Monroe</option><option>Snohomish</option><option>Arlington</option>
-          <option>Lake Stevens</option><option>Martha Lake</option><option>Maltby</option>
-          <option>Other nearby area</option>
-        </select>
-        <div class="city-msg" id="city-msg"></div>
-        <div class="step-nav">
-          <button class="btn-back" onclick="goTo(6)">&#x2190; Back</button>
-          <button class="btn-continue" id="next-7" disabled onclick="showLoading()">See Results &#x2192;</button>
-        </div>
-      </div>
+  <div class="not-yet" id="not-yet">
+    <div style="font-size:15px;font-weight:700;color:var(--dark);margin-bottom:14px;">No worries &#8212; want us to email you your recommendation?</div>
+    <div class="form-field" style="margin-bottom:6px;">
+      <input type="email" id="f-email-warm" placeholder="Your email address" autocomplete="email" oninput="clearWarmErr()" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:'Barlow',sans-serif;color:var(--dark);outline:none;background:var(--light);transition:border 0.15s;">
     </div>
-
-    <div class="loading-panel" id="loading">
-      <div class="loading-msg">Finding the right system for your home...</div>
-      <div class="bar-track"><div class="bar-fill" id="bar-fill"></div></div>
-      <div class="bar-pct" id="bar-pct">0%</div>
+    <div id="f-email-warm-err" style="font-size:11px;color:#E74C3C;min-height:16px;margin-bottom:6px;"></div>
+    <div class="check-wrap" style="margin-bottom:14px;">
+      <input type="checkbox" id="f-warm-agree" onchange="toggleWarmSubmit()">
+      <label class="check-label" for="f-warm-agree">I agree to receive occasional tips and offers from Mill Creek HVAC. Unsubscribe anytime.</label>
     </div>
+    <button class="btn-submit" id="btn-warm-submit" disabled onclick="submitWarmEmail()" style="margin-bottom:10px;">Send My Recommendation &#x2192;</button>
+    <button class="btn-skip" id="btn-skip-all" onclick="showSkip()" style="width:100%;background:none;border:none;font-size:12px;color:#B8C9D9;cursor:pointer;font-family:'Barlow',sans-serif;padding:6px;">I&#8217;m all set, thanks</button>
+  </div>
 
-    <div class="result-panel" id="result-panel">
-      <div class="result-intro" id="result-intro"></div>
-      <div class="rec-box">
-        <div class="rec-eyebrow">Our recommendation</div>
-        <div class="rec-system" id="rec-system"></div>
-        <div class="rec-why" id="rec-why"></div>
-      </div>
-      <div class="fit-list" id="fit-list"></div>
+  <!-- WARM SUCCESS -->
+  <div id="warm-success" style="display:none;text-align:center;padding:20px;background:var(--white);border:1px solid #D1FAE5;border-radius:12px;background:#F0FDF4;margin-bottom:10px;">
+    <div style="font-size:28px;margin-bottom:10px;">&#10003;</div>
+    <div style="font-size:15px;font-weight:700;color:var(--dark);margin-bottom:6px;">Got it &#8212; check your inbox.</div>
+    <div style="font-size:13px;color:var(--muted);line-height:1.7;">We&#8217;ll email your recommendation shortly.<br>Ready to move forward? Come back anytime.</div>
+  </div>
 
-      <div class="cta-box" id="cta-box">
-        <div class="cta-q" id="cta-q"></div>
-        <div class="cta-btns">
-          <button class="btn-yes" onclick="showForm()">Yes &#x2192;</button>
-          <button class="btn-no" onclick="showNotYet()">Not yet</button>
-        </div>
-      </div>
+  <!-- SKIP FINAL -->
+  <div id="skip-final" style="display:none;text-align:center;padding:20px;">
+    <div style="font-size:14px;color:var(--muted);line-height:1.7;">Your recommendation will still be here<br>when you&#8217;re ready.</div>
+  </div>
 
-      <div class="form-section" id="form-section">
-        <div class="form-title">One step to see your estimate</div>
-        <input type="text" id="h-pot" style="display:none;position:absolute;left:-9999px;" tabindex="-1" autocomplete="off">
-        <div class="form-row">
-          <div>
-            <div class="form-field"><input type="text" id="f-name" placeholder="First name" autocomplete="given-name" oninput="clearErr('f-name')"></div>
-            <div style="font-size:11px;color:#E74C3C;min-height:16px;margin-bottom:4px;" id="f-name-err"></div>
-          </div>
-          <div>
-            <div class="form-field"><input type="email" id="f-email" placeholder="Your email" autocomplete="email" oninput="clearErr('f-email')"></div>
-            <div style="font-size:11px;color:#E74C3C;min-height:16px;margin-bottom:4px;" id="f-email-err"></div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div>
-            <div class="form-field"><input type="tel" id="f-phone" placeholder="Phone (10 digits)" autocomplete="tel" inputmode="numeric" oninput="clearErr('f-phone')"></div>
-            <div style="font-size:11px;color:#E74C3C;min-height:16px;margin-bottom:4px;" id="f-phone-err"></div>
-          </div>
-          <div>
-            <div class="form-field"><input type="text" id="f-zip" placeholder="Zip code (starts with 98)" maxlength="5" autocomplete="postal-code" inputmode="numeric" oninput="clearErr('f-zip')"></div>
-            <div style="font-size:11px;color:#E74C3C;min-height:16px;margin-bottom:4px;" id="f-zip-err"></div>
-          </div>
-        </div>
-        <div class="check-wrap">
-          <input type="checkbox" id="f-agree" onchange="toggleSubmit()">
-          <label class="check-label" for="f-agree">By submitting I agree I may be contacted by one local installer about my estimate.</label>
-        </div>
-        <button class="btn-submit" id="btn-submit" disabled onclick="submitForm()">Get My Instant Estimate &#x2192;</button>
-      </div>
+  <button class="restart-btn" onclick="restartCalc()">&#x2190; Start over</button>
+</div>
 
-      <div class="price-reveal" id="price-reveal">
-      <div style="background:rgba(39,174,96,0.08);border:1px solid rgba(39,174,96,0.2);border-radius:12px;padding:14px 16px;margin-bottom:14px;">
-        <div style="font-size:14px;font-weight:700;color:#1A6B3A;margin-bottom:2px;">&#10003; Got it — here’s your instant estimate.</div>
-        <div id="reveal-confirm" style="font-size:12px;color:#4A8A5A;line-height:1.5;"></div>
-      </div>
-      
-      
-        <div class="est-box">
-          <div class="est-eyebrow" id="reveal-eyebrow">Installation estimate</div>
-          <div class="est-range" id="reveal-range"></div>
-          <div class="est-note" id="reveal-note"></div>
-        </div>
-        <div class="savings-table">
-          <div class="savings-row" id="federal-row"><span>Federal tax credit (IRA)</span><span id="federal-amt">up to &#8211;$2,000</span></div>
-          <div class="savings-row"><span>Utility rebates</span><span style="color:#9BB0C4;font-weight:500;">Ask your installer</span></div>
-        </div>
-        <div class="net-box" id="net-box">
-          <div class="net-eyebrow">Net estimate after savings</div>
-          <div class="net-range" id="net-range"></div>
-          <div class="net-note" id="net-note"></div>
-        </div>
-        <div class="savings-caveat">Federal credit eligibility depends on system type and income. Your installer can confirm during the free estimate.</div>
-      </div>
+<div class="trust-strip">
+  <div class="trust-item"><span class="trust-check">&#10003;</span> Licensed &amp; Insured</div>
+  <div class="trust-item"><span class="trust-check">&#10003;</span> Same-Day Response</div>
+  <div class="trust-item"><span class="trust-check">&#10003;</span> Free Estimates</div>
+  <div class="trust-item"><span class="trust-check">&#10003;</span> No Obligation</div>
+</div>
+```
 
-      <div class="not-yet" id="not-yet">
-        <div class="not-yet-msg"><strong>No problem at all</strong> &#8212; come back when you&#8217;re ready.<br>Your recommendation will still be here.</div>
-      </div>
-
-      <button class="restart-btn" onclick="restartCalc()">&#x2190; Start over</button>
-    </div>
-
-    <div class="trust-strip">
-      <div class="trust-item"><span class="trust-check">&#10003;</span> Licensed &amp; Insured</div>
-      <div class="trust-item"><span class="trust-check">&#10003;</span> Same-Day Response</div>
-      <div class="trust-item"><span class="trust-check">&#10003;</span> Free Estimates</div>
-      <div class="trust-item"><span class="trust-check">&#10003;</span> No Obligation</div>
-    </div>
   </div>
 </div>
 
@@ -448,8 +474,6 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
 <div class="footer">
   <p>selector.millcreek-hvac.com &nbsp;|&nbsp; 425.595.7972<br>Licensed, insured &amp; bonded &middot; Greater Snohomish County<br><a href="https://millcreek-hvac.com">millcreek-hvac.com</a> &nbsp;|&nbsp; Mill Creek HVAC &copy; 2026</p>
 </div>
-
-
 
 <script>
 var state={homeType:null,homeTypeLabel:null,zones:null,zonesLabel:null,stories:null,storiesLabel:null,cooling:null,coolingLabel:null,size:null,sizeLabel:null,ducts:null,ductsLabel:null,city:null};
@@ -565,7 +589,7 @@ function buildResult(){
   var rw=safe("rec-why");if(rw)rw.textContent=getWhy(recKey);
   var fitEl=safe("fit-list");
   if(fitEl)fitEl.innerHTML=sys.fits.map(function(f){return'<div class="fit-item"><span class="fit-check">✓</span>'+f+'</div>';}).join("");
-  var cq=safe("cta-q");if(cq)cq.textContent="Want to see your instant estimate for "+state.city+" area homes?";
+  var cq=safe("cta-q");if(cq)cq.textContent="See exactly what AC installation costs in "+state.city+" — free, instant.";
   for(var i=1;i<=7;i++){var s=safe("seg-"+i);if(s)s.className="prog-seg done";}
   var lbl=safe("prog-label");if(lbl)lbl.textContent="Your recommendation";
   var rp=safe("result-panel");if(rp)rp.classList.add("active");
@@ -644,7 +668,7 @@ function revealPrice(recKey,priceData){
 
 function showNotYet(){
   var cb=safe("cta-box");if(cb)cb.style.display="none";
-  var ny=safe("not-yet");if(ny)ny.classList.add("active");
+  var ny=safe("not-yet");if(ny)ny.style.display="block";
 }
 
 function restartCalc(){
@@ -658,7 +682,12 @@ function restartCalc(){
   var rp=safe("result-panel");if(rp)rp.classList.remove("active");
   var fs=safe("form-section");if(fs)fs.classList.remove("active");
   var pr=safe("price-reveal");if(pr)pr.classList.remove("active");
-  var ny=safe("not-yet");if(ny)ny.classList.remove("active");
+  var ny=safe("not-yet");if(ny){ny.style.display="none";}
+  var ws=safe("warm-success");if(ws)ws.style.display="none";
+  var sf=safe("skip-final");if(sf)sf.style.display="none";
+  var ew=safe("f-email-warm");if(ew)ew.value="";
+  var wa=safe("f-warm-agree");if(wa)wa.checked=false;
+  var wb=safe("btn-warm-submit");if(wb){wb.textContent="Send My Recommendation →";wb.disabled=true;}
   var cb=safe("cta-box");if(cb)cb.style.display="block";
   var bs=safe("btn-submit");if(bs){bs.textContent="Get My Instant Estimate →";bs.disabled=true;}
   var fa=safe("f-agree");if(fa)fa.checked=false;
@@ -667,6 +696,45 @@ function restartCalc(){
     var err=safe(id+"-err");if(err)err.textContent="";
   });
   goTo(1);var s1=safe("step-1");if(s1)s1.classList.add("active");
+}
+
+
+function clearWarmErr(){
+  var el=safe("f-email-warm");if(el)el.style.borderColor="var(--border)";
+  var err=safe("f-email-warm-err");if(err)err.textContent="";
+}
+
+function toggleWarmSubmit(){
+  var agree=safe("f-warm-agree"),btn=safe("btn-warm-submit");
+  if(agree&&btn)btn.disabled=!agree.checked;
+}
+
+async function submitWarmEmail(){
+  var emailEl=safe("f-email-warm");
+  if(!emailEl)return;
+  var email=emailEl.value.trim().replace(/<[^>]*>/g,"");
+  var emailRe=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!email||!emailRe.test(email)){
+    emailEl.style.borderColor="#E74C3C";
+    var err=safe("f-email-warm-err");
+    if(err)err.textContent="Please enter a valid email address";
+    return;
+  }
+  var btn=safe("btn-warm-submit");
+  if(btn){btn.textContent="Sending...";btn.disabled=true;}
+  var recKey=getRecommendation();
+  var sys=systems[recKey];
+  var payload={lead_type:"warm",source:"ac-selector",timestamp:new Date().toISOString(),recommendation:sys.name,home_type:state.homeTypeLabel,zones:state.zonesLabel,stories:state.storiesLabel,existing_cooling:state.coolingLabel,size:state.sizeLabel,ducts:state.ductsLabel,city:state.city,email:email};
+  fetch(WEBHOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)}).catch(function(){});
+  var ny=safe("not-yet");if(ny)ny.style.display="none";
+  var ws=safe("warm-success");if(ws)ws.style.display="block";
+}
+
+function showSkip(){
+  var ny=safe("not-yet");if(ny)ny.style.display="none";
+  var sf=safe("skip-final");if(sf)sf.style.display="block";
+  var payload={lead_type:"cold",source:"ac-selector",timestamp:new Date().toISOString(),recommendation:systems[getRecommendation()].name,city:state.city,size:state.sizeLabel};
+  fetch(WEBHOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)}).catch(function(){});
 }
 
 function toggleFaq(btn){
