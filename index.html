@@ -544,7 +544,7 @@ function buildResult(){
   document.getElementById("rec-why").textContent=getWhy(recKey);
   const fitEl=document.getElementById("fit-list");
   fitEl.innerHTML=sys.fits.map(f=>`<div class="fit-item"><span class="fit-check">✓</span>${f}</div>`).join("");
-  document.getElementById("cta-q").textContent="Want to see your instant estimate for "+state.city+"?";
+  document.getElementById("cta-q").textContent="See what homeowners in "+state.city+" are paying for similar installations.";
   for(let i=1;i<=6;i++){const s=document.getElementById("seg-"+i);if(s)s.className="prog-seg done";}
   document.getElementById("prog-label").textContent="Your recommendation";
   document.getElementById("result-panel").classList.add("active");
