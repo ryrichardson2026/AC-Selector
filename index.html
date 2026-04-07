@@ -7,7 +7,7 @@
 <meta name="description" content="Not sure which AC system you need? Answer 6 quick questions and get a personalized recommendation for your Snohomish County home — free.">
 <meta name="keywords" content="home cooling options Snohomish County, which AC system is right for my home, ductless vs central air Mill Creek, mini split vs central AC, add air conditioning older home, best AC system Bothell">
 <link rel="canonical" href="https://selector.millcreek-hvac.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17039190320"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -45,14 +45,20 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
 .hero-testi-detail{font-size:11px;color:var(--muted);}
 
 /* GET STARTED BUTTON */
-.btn-hero{display:inline-flex;align-items:center;gap:10px;background:var(--orange);border:none;border-radius:12px;padding:18px 36px;font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:800;color:var(--white);cursor:pointer;letter-spacing:1px;text-transform:uppercase;transition:background 0.15s,transform 0.15s,box-shadow 0.15s;box-shadow:0 6px 24px rgba(255,107,53,0.35);margin-bottom:10px;}
-.btn-hero:hover{background:var(--orange2);transform:translateY(-2px);box-shadow:0 10px 32px rgba(255,107,53,0.45);}
+.btn-hero{display:inline-flex;align-items:center;gap:10px;background:#27AE60;border:none;border-radius:12px;padding:18px 36px;font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:800;color:var(--white);cursor:pointer;letter-spacing:1px;text-transform:uppercase;transition:background 0.15s,transform 0.15s,box-shadow 0.15s;box-shadow:0 6px 24px rgba(39,174,96,0.35);margin-bottom:10px;}
+.btn-hero:hover{background:#219A52;transform:translateY(-2px);box-shadow:0 10px 32px rgba(39,174,96,0.45);}
 .hero-sub-cta{font-size:12px;color:rgba(255,255,255,0.3);margin-bottom:24px;letter-spacing:0.3px;}
 
 /* HERO TRUST */
 .hero-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 20px;}
 .hero-trust-item{font-size:12px;font-weight:600;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:5px;}
 .hero-trust-item span{color:var(--white);}
+.hero-testimonial{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:16px 18px;max-width:420px;margin:20px auto 0;text-align:left;}
+.hero-testi-text{font-size:14px;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.65;margin-bottom:12px;}
+.hero-testi-attr{display:flex;align-items:center;gap:10px;}
+.hero-testi-avatar{width:32px;height:32px;border-radius:50%;background:rgba(91,164,232,0.2);border:1px solid rgba(91,164,232,0.3);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--accent);flex-shrink:0;}
+.hero-testi-name{font-size:13px;font-weight:700;color:var(--white);}
+.hero-testi-detail{font-size:11px;color:var(--muted);}
 
 /* STATS */
 .stats-section{max-width:600px;margin:0 auto;padding:32px 16px 0;}
@@ -74,96 +80,111 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
 .calc-wrap{max-width:600px;margin:0 auto;padding:32px 16px 6px;}
 .calc-card{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.25);display:none;}
 .calc-card.active{display:block;}
-.progress-bar{background:var(--navy2);padding:14px 20px;display:flex;align-items:center;gap:6px;}
-.prog-seg{flex:1;height:3px;background:rgba(255,255,255,0.1);border-radius:2px;transition:background 0.3s;}
-.prog-seg.done{background:rgba(255,255,255,0.3);}
-.prog-seg.active{background:var(--accent);}
-.prog-label{font-size:11px;font-weight:600;color:rgba(255,255,255,0.3);letter-spacing:0.5px;margin-left:8px;white-space:nowrap;}
-.step-body{padding:28px 22px 22px;}
+
+/* PERSISTENT HEADER */
+.calc-header{background:#F0F4F8;padding:14px 22px;border-bottom:1px solid #DDE6EE;display:flex;align-items:center;justify-content:space-between;}
+.calc-header-title{font-family:"Barlow",sans-serif;font-size:18px;font-weight:700;color:var(--orange);}
+.calc-header-step{font-size:10px;font-weight:600;color:#8AAFC8;letter-spacing:1px;text-transform:uppercase;}
+
+/* PROGRESS */
+.progress-track{height:3px;background:#E8EEF4;display:flex;gap:2px;}
+.prog-seg{flex:1;height:3px;background:#E8EEF4;transition:background 0.4s;}
+.prog-seg.done{background:rgba(27,111,200,0.35);}
+.prog-seg.active{background:#1B6FC8;}
+
+/* STEP */
+.step-body{padding:36px 28px 26px;}
 .step-panel{display:none;}
 .step-panel.active{display:block;}
-.step-q{font-size:21px;font-weight:700;color:var(--dark);line-height:1.3;margin-bottom:6px;}
-.step-hint{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:20px;}
-.options{display:grid;gap:8px;}
-.opt{border:1.5px solid var(--border);border-radius:12px;padding:12px 14px;cursor:pointer;transition:all 0.15s;background:var(--light);text-align:left;display:flex;align-items:center;gap:11px;width:100%;}
-.opt:hover{border-color:#B8D0E8;background:#EEF5FB;}
-.opt.selected{border-color:var(--accent);background:rgba(91,164,232,0.04);}
-.opt-icon{font-size:18px;width:34px;height:34px;background:var(--white);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--border);}
-.opt.selected .opt-icon{border-color:rgba(91,164,232,0.2);background:rgba(91,164,232,0.05);}
-.opt-label{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:2px;}
-.opt-sub{font-size:11px;color:var(--muted);line-height:1.4;}
-.city-select{width:100%;padding:13px 14px;background:var(--light);border:1.5px solid var(--border);border-radius:12px;font-size:14px;font-weight:600;color:var(--dark);font-family:"Barlow",sans-serif;cursor:pointer;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A6A8A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;transition:border 0.15s;}
-.city-select:focus{border-color:var(--accent);}
-.city-msg{font-size:12px;color:#3B8A3E;margin-top:8px;min-height:18px;font-weight:600;}
-.step-nav{display:flex;gap:8px;margin-top:20px;padding-top:18px;border-top:1px solid #EEF2F7;}
-.btn-back{background:none;border:1.5px solid var(--border);border-radius:10px;padding:11px 18px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;font-family:"Barlow",sans-serif;transition:all 0.15s;}
-.btn-back:hover{border-color:#B8D0E8;color:var(--dark);}
-.btn-continue{flex:1;background:var(--dark);border:none;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:700;color:var(--white);cursor:pointer;font-family:"Barlow",sans-serif;transition:all 0.15s;}
-.btn-continue:hover{background:#1B3A6B;}
-.btn-continue:disabled{opacity:0.3;cursor:not-allowed;}
-.loading-panel{display:none;padding:48px 22px;text-align:center;background:var(--light);}
+.step-panel.fade-in{animation:fadeUp 0.3s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.step-q{font-family:"Barlow",sans-serif;font-size:22px;font-weight:700;color:#1A2B3C;line-height:1.3;margin-bottom:24px;}
+.step-hint{font-size:13px;color:#7A9BB5;line-height:1.65;margin-bottom:22px;}
+
+/* DROPDOWN */
+.step-select{width:100%;padding:14px 16px;background:#F7FAFD;border:1.5px solid #D8E6F0;border-radius:12px;font-size:15px;font-weight:500;color:#1A2B3C;font-family:"Barlow",sans-serif;cursor:pointer;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237A9BB5' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px;transition:border 0.15s;margin-bottom:24px;}
+.step-select:focus{border-color:var(--orange);}
+.step-select option{background:#fff;color:#1A2B3C;}
+
+.city-msg{font-size:12px;font-weight:600;color:#3B8A3E;margin-top:-18px;margin-bottom:20px;min-height:18px;}
+
+/* NAV BUTTONS */
+.step-nav{display:flex;gap:8px;margin-top:4px;padding-top:18px;border-top:1px solid #EEF2F7;}
+.btn-back{background:none;border:1.5px solid #DDE6EE;border-radius:10px;padding:11px 18px;font-size:13px;font-weight:600;color:#8AAFC8;cursor:pointer;font-family:"Barlow",sans-serif;transition:all 0.15s;}
+.btn-back:hover{border-color:#B8D0E8;color:#1A2B3C;}
+.btn-continue{flex:1;background:#1A2B3C;border:none;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:600;color:var(--white);cursor:pointer;font-family:"Barlow",sans-serif;transition:all 0.15s;}
+.btn-continue:hover{background:#243D54;}
+.btn-continue:disabled{opacity:0.25;cursor:not-allowed;}
+
+/* LOADING */
+.loading-panel{display:none;padding:52px 26px;text-align:center;background:#F7FAFD;}
 .loading-panel.active{display:block;}
-.loading-msg{font-size:15px;font-weight:600;color:var(--dark);margin-bottom:20px;line-height:1.5;}
-.loading-msg span{color:var(--accent);}
-.bar-track{background:var(--border);border-radius:4px;height:4px;max-width:280px;margin:0 auto 10px;overflow:hidden;}
-.bar-fill{height:100%;width:0%;background:var(--accent);border-radius:4px;transition:width 0.04s linear;}
-.bar-pct{font-size:12px;color:var(--muted);font-weight:600;}
+.loading-msg{font-family:"Barlow",sans-serif;font-size:18px;font-weight:700;color:#1A2B3C;margin-bottom:22px;line-height:1.4;}
+.bar-track{background:#DDE6EE;border-radius:4px;height:3px;max-width:260px;margin:0 auto 10px;overflow:hidden;}
+.bar-fill{height:100%;width:0%;background:var(--orange);border-radius:4px;transition:width 0.04s linear;}
+.bar-pct{font-size:12px;color:#8AAFC8;font-weight:600;}
 
 /* RESULT */
-.result-panel{display:none;padding:26px 22px;background:var(--light);border-top:3px solid var(--accent);}
+.result-panel{display:none;padding:26px 26px;background:#F7FAFD;border-top:3px solid var(--orange);}
 .result-panel.active{display:block;}
-.result-intro{font-size:14px;color:#6B8299;line-height:1.75;margin-bottom:20px;}
-.result-intro strong{color:var(--dark);}
-.rec-box{background:var(--white);border:1.5px solid var(--accent);border-radius:14px;padding:20px;margin-bottom:12px;}
-.rec-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
-.rec-system{font-family:"Barlow Condensed",sans-serif;font-size:32px;font-weight:800;color:var(--dark);letter-spacing:-0.5px;line-height:1.1;margin-bottom:10px;}
+.result-intro{font-size:13px;color:#6B8299;line-height:1.75;margin-bottom:20px;}
+.result-intro strong{color:#1A2B3C;}
+.rec-box{background:var(--white);border:1.5px solid var(--orange);border-radius:14px;padding:20px;margin-bottom:12px;}
+.rec-eyebrow{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:8px;}
+.rec-system{font-family:"Barlow Condensed",sans-serif;font-size:32px;font-weight:800;color:#1A2B3C;letter-spacing:-0.5px;line-height:1.1;margin-bottom:10px;}
 .rec-why{font-size:13px;color:#6B8299;line-height:1.7;}
-.fit-list{background:rgba(91,164,232,0.04);border:1px solid rgba(91,164,232,0.12);border-radius:10px;padding:12px 14px;margin-bottom:16px;}
-.fit-item{font-size:12px;font-weight:600;color:var(--dark);padding:4px 0;border-bottom:1px solid rgba(91,164,232,0.08);line-height:1.5;}
+.fit-list{background:rgba(255,107,53,0.04);border:1px solid rgba(255,107,53,0.12);border-radius:10px;padding:12px 14px;margin-bottom:16px;}
+.fit-item{font-size:12px;font-weight:600;color:#1A2B3C;padding:4px 0;border-bottom:1px solid rgba(255,107,53,0.08);line-height:1.5;}
 .fit-item:last-child{border-bottom:none;}
 .fit-check{color:var(--green);margin-right:6px;}
-.cta-box{background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:20px;margin-bottom:10px;}
-.cta-q{font-size:16px;font-weight:700;color:var(--dark);line-height:1.4;margin-bottom:16px;letter-spacing:-0.2px;}
-.cta-btns{display:flex;gap:10px;}
-.btn-yes{flex:1;background:var(--orange);border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:700;color:var(--white);cursor:pointer;font-family:"Barlow",sans-serif;transition:all 0.15s;}
+.cta-box{background:var(--white);border:1.5px solid #DDE6EE;border-radius:14px;padding:20px;margin-bottom:10px;}
+.cta-q{font-family:"Barlow",sans-serif;font-size:17px;font-weight:700;color:#1A2B3C;line-height:1.5;margin-bottom:16px;text-align:center;}
+.cta-btns{display:flex;gap:10px;flex-direction:column;}
+.btn-yes{width:100%;background:var(--orange);border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:600;color:var(--white);cursor:pointer;font-family:"Barlow",sans-serif;transition:all 0.15s;}
 .btn-yes:hover{background:var(--orange2);}
-.btn-no{flex:1;background:none;border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:15px;font-weight:700;color:var(--muted);cursor:pointer;font-family:"Barlow",sans-serif;transition:all 0.15s;}
-.btn-no:hover{border-color:#B8D0E8;color:var(--dark);}
-.form-section{display:none;background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:20px;margin-bottom:10px;}
+.btn-no{width:100%;background:none;border:1.5px solid #DDE6EE;border-radius:10px;padding:11px;font-size:13px;font-weight:500;color:#8AAFC8;cursor:pointer;font-family:"Barlow",sans-serif;transition:all 0.15s;}
+.btn-no:hover{border-color:#B8D0E8;color:#1A2B3C;}
+
+/* FORM */
+.form-section{display:none;background:var(--white);border:1.5px solid #DDE6EE;border-radius:14px;padding:22px;margin-bottom:10px;}
 .form-section.active{display:block;}
-.form-title{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:16px;}
+.form-title{font-family:"Barlow",sans-serif;font-size:18px;font-weight:700;color:#1A2B3C;margin-bottom:4px;}
+.form-sub{font-size:13px;color:#8AAFC8;margin-bottom:18px;line-height:1.6;}
 .form-field{margin-bottom:10px;}
-.form-field input{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:"Barlow",sans-serif;color:var(--dark);outline:none;background:var(--light);transition:border 0.15s;}
-.form-field input:focus{border-color:var(--accent);}
+.form-field input{width:100%;padding:13px 15px;background:#F7FAFD;border:1.5px solid #DDE6EE;border-radius:10px;font-size:14px;font-family:"DM Sans",sans-serif;color:#1A2B3C;outline:none;transition:border 0.15s;}
+.form-field input::placeholder{color:#A8C0D0;}
+.form-field input:focus{border-color:var(--orange);}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.check-wrap{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;margin-top:6px;}
-.check-wrap input[type="checkbox"]{width:18px;height:18px;flex-shrink:0;margin-top:2px;accent-color:var(--accent);cursor:pointer;}
-.check-label{font-size:12px;color:var(--muted);line-height:1.6;cursor:pointer;}
-.btn-submit{width:100%;background:var(--orange);border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:700;color:var(--white);cursor:pointer;font-family:"Barlow",sans-serif;transition:all 0.15s;}
+.check-wrap{display:flex;align-items:flex-start;gap:10px;margin:12px 0 16px;}
+.check-wrap input[type="checkbox"]{width:18px;height:18px;flex-shrink:0;margin-top:2px;accent-color:var(--orange);cursor:pointer;}
+.check-label{font-size:12px;color:#8AAFC8;line-height:1.6;cursor:pointer;}
+.btn-submit{width:100%;background:var(--orange);border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:600;color:var(--white);cursor:pointer;font-family:"Barlow",sans-serif;transition:all 0.15s;}
 .btn-submit:hover{background:var(--orange2);}
-.btn-submit:disabled{opacity:0.4;cursor:not-allowed;}
+.btn-submit:disabled{opacity:0.3;cursor:not-allowed;}
+
+/* PRICE REVEAL */
 .price-reveal{display:none;margin-bottom:10px;}
 .price-reveal.active{display:block;}
-.est-box{background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:18px 20px;margin-bottom:10px;}
-.est-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
-.est-range{font-family:"Barlow Condensed",sans-serif;font-size:44px;font-weight:800;color:var(--dark);letter-spacing:-1px;line-height:1;margin-bottom:6px;}
-.est-note{font-size:12px;color:var(--muted);line-height:1.6;}
-.savings-table{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px;}
-.savings-row{display:flex;justify-content:space-between;font-size:12px;padding:5px 0;border-bottom:1px solid var(--border);}
+.est-box{background:var(--white);border:1.5px solid #DDE6EE;border-radius:14px;padding:18px 20px;margin-bottom:10px;}
+.est-eyebrow{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#8AAFC8;margin-bottom:6px;}
+.est-range{font-family:"Barlow Condensed",sans-serif;font-size:42px;font-weight:800;color:#1A2B3C;letter-spacing:-1px;line-height:1;margin-bottom:6px;}
+.est-note{font-size:12px;color:#8AAFC8;line-height:1.6;}
+.savings-table{background:var(--white);border:1px solid #DDE6EE;border-radius:10px;padding:12px 14px;margin-bottom:10px;}
+.savings-row{display:flex;justify-content:space-between;font-size:12px;padding:5px 0;border-bottom:1px solid #EEF2F7;}
 .savings-row:last-child{border-bottom:none;}
-.savings-row span:first-child{color:var(--muted);}
+.savings-row span:first-child{color:#8AAFC8;}
 .savings-row span:last-child{font-weight:700;color:var(--green);}
 .net-box{background:rgba(91,164,232,0.05);border:1.5px solid rgba(91,164,232,0.2);border-radius:12px;padding:16px 18px;margin-bottom:10px;}
-.net-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
-.net-range{font-family:"Barlow Condensed",sans-serif;font-size:44px;font-weight:800;color:var(--accent);letter-spacing:-1px;line-height:1;margin-bottom:6px;}
+.net-eyebrow{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.net-range{font-family:"Barlow Condensed",sans-serif;font-size:42px;font-weight:800;color:var(--accent);letter-spacing:-1px;line-height:1;margin-bottom:6px;}
 .net-note{font-size:12px;color:#6B8299;line-height:1.6;}
-.savings-caveat{font-size:11px;color:#9BB0C4;line-height:1.6;font-style:italic;margin-bottom:16px;}
+.savings-caveat{font-size:11px;color:#B8C9D9;line-height:1.6;font-style:italic;margin-bottom:16px;}
 .not-yet{display:none;text-align:center;padding:20px;}
 .not-yet.active{display:block;}
-.not-yet-msg{font-size:14px;color:var(--muted);line-height:1.7;}
-.not-yet-msg strong{color:var(--dark);}
-.restart-btn{width:100%;background:none;border:none;font-size:12px;color:#B8C9D9;cursor:pointer;font-family:"Barlow",sans-serif;padding:10px;margin-top:4px;transition:color 0.15s;}
-.restart-btn:hover{color:var(--muted);}
+.not-yet-msg{font-size:14px;color:#8AAFC8;line-height:1.7;}
+.not-yet-msg strong{color:#1A2B3C;}
+.restart-btn{width:100%;background:none;border:none;font-size:12px;color:#B8C9D9;cursor:pointer;font-family:"DM Sans",sans-serif;padding:10px;margin-top:4px;transition:color 0.15s;}
+.restart-btn:hover{color:#8AAFC8;}
 
 /* TRUST STRIP */
 .trust-strip{background:var(--navy2);border-top:1px solid rgba(255,255,255,0.06);padding:12px 20px;display:flex;flex-wrap:wrap;gap:4px 16px;justify-content:center;}
@@ -173,7 +194,7 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
 /* SECTIONS */
 .section{max-width:600px;margin:0 auto;padding:0 16px 28px;}
 .section-eyebrow{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
-.section-title{font-family:"Barlow Condensed",sans-serif;font-size:clamp(22px,5vw,28px);font-weight:800;color:var(--white);text-transform:uppercase;margin-bottom:4px;}
+.section-title{font-family:"Barlow Condensed",sans-serif;font-size:clamp(22px,5vw,28px);font-weight:800;color:var(--white);text-transform:uppercase;margin-bottom:4px;text-align:center;}
 .section-sub{font-size:13px;color:var(--muted);margin-bottom:18px;}
 .systems-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
 .system-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:18px;}
@@ -195,8 +216,8 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
 .second-cta-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:28px 20px;text-align:center;}
 .second-cta-title{font-family:"Barlow Condensed",sans-serif;font-size:24px;font-weight:800;color:var(--white);text-transform:uppercase;margin-bottom:6px;}
 .second-cta-sub{font-size:13px;color:var(--muted);margin-bottom:18px;}
-.second-cta-btn{background:var(--orange);border:none;border-radius:10px;padding:14px 28px;font-family:"Barlow",sans-serif;font-size:16px;font-weight:700;color:var(--white);cursor:pointer;transition:background 0.15s;}
-.second-cta-btn:hover{background:var(--orange2);}
+.second-cta-btn{background:#27AE60;border:none;border-radius:10px;padding:14px 28px;font-family:"Barlow",sans-serif;font-size:16px;font-weight:700;color:var(--white);cursor:pointer;transition:background 0.15s;}
+.second-cta-btn:hover{background:#219A52;}
 
 /* FAQ */
 .faq-list{border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;background:rgba(255,255,255,0.03);}
@@ -239,179 +260,113 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
 
   <button class="btn-hero" onclick="startSelector()">Get Started &#x2192;</button>
 
-  <div class="hero-trust">
-    <div class="hero-trust-item"><span>✓</span> Licensed & insured installers only</div>
-    <div class="hero-trust-item"><span>✓</span> Free estimates</div>
-    <div class="hero-trust-item"><span>✓</span> No obligation to book</div>
-    <div class="hero-trust-item"><span>✓</span> One contractor, not a call center</div>
+  <div class="hero-testimonial">
+    <div class="hero-testi-text">"Had no idea which system we needed. This walked us through it in 2 minutes and we knew exactly what to ask for when the installer came out."</div>
+    <div class="hero-testi-attr">
+      <div class="hero-testi-avatar">MC</div>
+      <div>
+        <div class="hero-testi-name">Mill Creek Homeowner</div>
+        <div class="hero-testi-detail">Ductless heat pump installed</div>
+      </div>
+    </div>
   </div>
+
 </div>
 
-<!-- STATS -->
-<div class="stats-section">
-  <div class="stats-row">
-    <div class="stat-box">
-      <div class="stat-num">4</div>
-      <div class="stat-label">system types — most homeowners don't know the difference</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-num">$2,000</div>
-      <div class="stat-label">federal tax credit available on qualifying systems</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-num">1 day</div>
-      <div class="stat-label">typical install time in Snohomish County</div>
-    </div>
-  </div>
-</div>
 
-<!-- REVIEWS -->
-<div class="how-section">
-  <div class="how-eyebrow">What Homeowners Say</div>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Had no idea which system we needed — no ductwork, two-story home. This told us exactly what to get. Install was done in a day."</p>
-      <div class="review-attr">
-        <div class="review-avatar">MC</div>
-        <div>
-          <div class="review-name">Mill Creek Homeowner</div>
-          <div class="review-detail">Multi-zone ductless · paid $11,400</div>
-        </div>
-      </div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Prompt, personable, patiently answered all my questions. Their expertise gave me complete confidence in the decision."</p>
-      <div class="review-attr">
-        <div class="review-avatar">BW</div>
-        <div>
-          <div class="review-name">Bothell Homeowner</div>
-          <div class="review-detail">Ducted heat pump · paid $12,800</div>
-        </div>
-      </div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Explained everything clearly. Install went smoothly and they came back a month later to answer more questions."</p>
-      <div class="review-attr">
-        <div class="review-avatar">LY</div>
-        <div>
-          <div class="review-name">Lynnwood Homeowner</div>
-          <div class="review-detail">Single-zone mini split · paid $5,100</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- CALCULATOR -->
 <div class="calc-wrap">
   <div class="calc-card" id="calc-card">
 
-    <div class="progress-bar">
+    <!-- PERSISTENT HEADER -->
+    <div class="calc-header">
+      <div class="calc-header-title">Let's Find the Right AC System for Your Home</div>
+      <div class="calc-header-step" id="prog-label">Question 1 of 5</div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="progress-track">
       <div class="prog-seg active" id="seg-1"></div>
       <div class="prog-seg" id="seg-2"></div>
       <div class="prog-seg" id="seg-3"></div>
       <div class="prog-seg" id="seg-4"></div>
       <div class="prog-seg" id="seg-5"></div>
-      <div class="prog-seg" id="seg-6"></div>
-      <div class="prog-seg" id="seg-7"></div>
-      <div class="prog-label" id="prog-label">Question 1 of 7</div>
     </div>
 
-    <!-- STEP 1 -->
+    <!-- STEP 1: Zones -->
     <div class="step-panel active" id="step-1">
       <div class="step-body">
-        <div class="step-q">What type of home do you live in?</div>
-        <div class="step-hint">This helps us match the right system to your property type.</div>
-        <div class="options">
-          <button class="opt" onclick="pick(this,1,'single-family','Single family home')"><div class="opt-icon">🏠</div><div><div class="opt-label">Single family home</div></div></button>
-          <button class="opt" onclick="pick(this,1,'condo','Condo or apartment')"><div class="opt-icon">🏢</div><div><div class="opt-label">Condo or apartment</div></div></button>
-          <button class="opt" onclick="pick(this,1,'townhouse','Townhouse')"><div class="opt-icon">🏘️</div><div><div class="opt-label">Townhouse</div></div></button>
-          <button class="opt" onclick="pick(this,1,'multi-family','Multi-family')"><div class="opt-icon">🏡</div><div><div class="opt-label">Multi-family</div></div></button>
+        <div class="step-q">How much of your home do you want to cool?</div>
+        <select class="step-select" id="sel-1" onchange="onSelect(1,this.value,this.options[this.selectedIndex].text)">
+          <option value="">Choose an answer...</option>
+          <option value="one">One room or zone</option>
+          <option value="few">2–3 rooms</option>
+          <option value="whole">Whole home</option>
+        </select>
+        <div class="step-nav">
+          <button class="btn-continue" id="next-1" disabled onclick="goTo(2)">Next &#x2192;</button>
         </div>
-        <div class="step-nav"><button class="btn-continue" id="next-1" disabled onclick="goTo(2)">Continue &#x2192;</button></div>
       </div>
     </div>
 
-    <!-- STEP 2 -->
+    <!-- STEP 2: Stories -->
     <div class="step-panel" id="step-2">
       <div class="step-body">
-        <div class="step-q">How much of your home do you want to cool?</div>
-        <div class="step-hint">This helps us size the right system and flag whether you need single or multiple zones.</div>
-        <div class="options">
-          <button class="opt" onclick="pick(this,2,'one','One room or zone')"><div><div class="opt-label">One room or zone</div></div></button>
-          <button class="opt" onclick="pick(this,2,'few','2–3 rooms')"><div><div class="opt-label">2–3 rooms</div></div></button>
-          <button class="opt" onclick="pick(this,2,'whole','Whole home')"><div><div class="opt-label">Whole home</div></div></button>
+        <div class="step-q">Is your home single or multi-story?</div>
+        <select class="step-select" id="sel-2" onchange="onSelect(2,this.value,this.options[this.selectedIndex].text)">
+          <option value="">Choose an answer...</option>
+          <option value="single">Single story</option>
+          <option value="multi">Two story or more</option>
+          <option value="split">Split level</option>
+        </select>
+        <div class="step-nav">
+          <button class="btn-back" onclick="goTo(1)">&#x2190; Back</button>
+          <button class="btn-continue" id="next-2" disabled onclick="goTo(3)">Next &#x2192;</button>
         </div>
-        <div class="step-nav"><button class="btn-back" onclick="goTo(1)">&#x2190; Back</button><button class="btn-continue" id="next-2" disabled onclick="goTo(3)">Continue &#x2192;</button></div>
       </div>
     </div>
 
-    <!-- STEP 3 -->
+    <!-- STEP 3: Ductwork -->
     <div class="step-panel" id="step-3">
       <div class="step-body">
-        <div class="step-q">Is your home single or multi-story?</div>
-        <div class="step-hint">Multi-story homes often need more zones — upper floors heat up faster in summer.</div>
-        <div class="options">
-          <button class="opt" onclick="pick(this,3,'single','Single story')"><div><div class="opt-label">Single story</div></div></button>
-          <button class="opt" onclick="pick(this,3,'multi','Two story or more')"><div><div class="opt-label">Two story or more</div></div></button>
-          <button class="opt" onclick="pick(this,3,'split','Split level')"><div><div class="opt-label">Split level</div></div></button>
+        <div class="step-q">Does your home have existing ductwork?</div>
+        <select class="step-select" id="sel-3" onchange="onSelect(3,this.value,this.options[this.selectedIndex].text)">
+          <option value="">Choose an answer...</option>
+          <option value="yes">Yes — has vents throughout</option>
+          <option value="no">No — no existing ductwork</option>
+          <option value="not-sure">Not sure</option>
+        </select>
+        <div class="step-nav">
+          <button class="btn-back" onclick="goTo(2)">&#x2190; Back</button>
+          <button class="btn-continue" id="next-3" disabled onclick="goTo(4)">Next &#x2192;</button>
         </div>
-        <div class="step-nav"><button class="btn-back" onclick="goTo(2)">&#x2190; Back</button><button class="btn-continue" id="next-3" disabled onclick="goTo(4)">Continue &#x2192;</button></div>
       </div>
     </div>
 
-    <!-- STEP 4 -->
+    <!-- STEP 4: Home size -->
     <div class="step-panel" id="step-4">
       <div class="step-body">
-        <div class="step-q">Is there an existing cooling system in your home?</div>
-        <div class="step-hint">This helps us understand whether we're replacing something or starting fresh.</div>
-        <div class="options">
-          <button class="opt" onclick="pick(this,4,'yes','Has existing cooling')"><div class="opt-icon">❄️</div><div><div class="opt-label">Yes</div></div></button>
-          <button class="opt" onclick="pick(this,4,'no','No existing cooling')"><div class="opt-icon">🌡️</div><div><div class="opt-label">No</div></div></button>
-          <button class="opt" onclick="pick(this,4,'not-sure','Not sure about existing cooling')"><div class="opt-icon">🤔</div><div><div class="opt-label">Not sure</div></div></button>
+        <div class="step-q">How big is your home?</div>
+        <select class="step-select" id="sel-4" onchange="onSelect(4,this.value,this.options[this.selectedIndex].text)">
+          <option value="">Choose an answer...</option>
+          <option value="u1500">Under 1,500 sqft</option>
+          <option value="1500-2500">1,500 – 2,500 sqft</option>
+          <option value="2500-3500">2,500 – 3,500 sqft</option>
+          <option value="o3500">Over 3,500 sqft</option>
+        </select>
+        <div class="step-nav">
+          <button class="btn-back" onclick="goTo(3)">&#x2190; Back</button>
+          <button class="btn-continue" id="next-4" disabled onclick="goTo(5)">Next &#x2192;</button>
         </div>
-        <div class="step-nav"><button class="btn-back" onclick="goTo(3)">&#x2190; Back</button><button class="btn-continue" id="next-4" disabled onclick="goTo(5)">Continue &#x2192;</button></div>
       </div>
     </div>
 
-    <!-- STEP 5 -->
+    <!-- STEP 5: City -->
     <div class="step-panel" id="step-5">
       <div class="step-body">
-        <div class="step-q">Does your home have existing ductwork?</div>
-        <div class="step-hint">Ducts are the vents in your floors, walls, or ceilings that distribute air. This is the biggest factor in which system fits your home.</div>
-        <div class="options">
-          <button class="opt" onclick="pick(this,5,'yes','Has ductwork')"><div><div class="opt-label">Yes — has vents throughout</div></div></button>
-          <button class="opt" onclick="pick(this,5,'no','No ductwork')"><div><div class="opt-label">No — no existing ductwork</div></div></button>
-          <button class="opt" onclick="pick(this,5,'not-sure','Not sure about ductwork')"><div><div class="opt-label">Not sure</div></div></button>
-        </div>
-        <div class="step-nav"><button class="btn-back" onclick="goTo(4)">&#x2190; Back</button><button class="btn-continue" id="next-5" disabled onclick="goTo(6)">Continue &#x2192;</button></div>
-      </div>
-    </div>
-
-    <!-- STEP 6 -->
-    <div class="step-panel" id="step-6">
-      <div class="step-body">
-        <div class="step-q">How big is your home?</div>
-        <div class="step-hint">Even a rough idea helps — this is the biggest factor in sizing the right system.</div>
-        <div class="options">
-          <button class="opt" onclick="pick(this,6,'u1500','Under 1,500 sqft')"><div class="opt-icon">🏠</div><div><div class="opt-label">Under 1,500 sqft</div></div></button>
-          <button class="opt" onclick="pick(this,6,'1500-2500','1,500 – 2,500 sqft')"><div class="opt-icon">🏡</div><div><div class="opt-label">1,500 – 2,500 sqft</div></div></button>
-          <button class="opt" onclick="pick(this,6,'2500-3500','2,500 – 3,500 sqft')"><div class="opt-icon">🏘️</div><div><div class="opt-label">2,500 – 3,500 sqft</div></div></button>
-          <button class="opt" onclick="pick(this,6,'o3500','Over 3,500 sqft')"><div class="opt-icon">🏰</div><div><div class="opt-label">Over 3,500 sqft</div></div></button>
-        </div>
-        <div class="step-nav"><button class="btn-back" onclick="goTo(5)">&#x2190; Back</button><button class="btn-continue" id="next-6" disabled onclick="goTo(7)">Continue &#x2192;</button></div>
-      </div>
-    </div>
-
-    <!-- STEP 7 -->
-    <div class="step-panel" id="step-7">
-      <div class="step-body">
         <div class="step-q">Which city are you in?</div>
-        <div class="step-hint">We'll pull pricing specific to your area — costs vary by city across Snohomish County.</div>
-        <select class="city-select" id="city-select" onchange="pickCity(this.value)">
+        <select class="step-select" id="city-select" onchange="pickCity(this.value)">
           <option value="">Select your city...</option>
           <option>Mill Creek</option><option>Bothell</option><option>Lynnwood</option><option>Mukilteo</option>
           <option>Kenmore</option><option>Mountlake Terrace</option><option>Edmonds</option><option>Shoreline</option>
@@ -420,12 +375,15 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
           <option>Martha Lake</option><option>Maltby</option><option>Other nearby area</option>
         </select>
         <div class="city-msg" id="city-msg"></div>
-        <div class="step-nav"><button class="btn-back" onclick="goTo(6)">&#x2190; Back</button><button class="btn-continue" id="next-7" disabled onclick="showLoading()">See Results &#x2192;</button></div>
+        <div class="step-nav">
+          <button class="btn-back" onclick="goTo(4)">&#x2190; Back</button>
+          <button class="btn-continue" id="next-5" disabled onclick="showLoading()">See My Recommendation &#x2192;</button>
+        </div>
       </div>
     </div>
 
     <div class="loading-panel" id="loading">
-      <div class="loading-msg">Finding the right system for your home...</div>
+      <div class="loading-msg">Finding the right system<br>for your home...</div>
       <div class="bar-track"><div class="bar-fill" id="bar-fill"></div></div>
       <div class="bar-pct" id="bar-pct">0%</div>
     </div>
@@ -442,38 +400,36 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
       <div class="cta-box" id="cta-box">
         <div class="cta-q" id="cta-q"></div>
         <div class="cta-btns">
-          <button class="btn-yes" onclick="showForm()">Get My Instant Estimate &#x2192;</button>
-          <button class="btn-no" onclick="showNotYet()">Not yet</button>
+          <button class="btn-yes" onclick="showForm()" style="background:#27AE60;">Get My Instant Estimate &#x2192;</button>
+        </div>
+        <div style="text-align:center;margin-top:10px;">
+          <button onclick="showNotYet()" style="background:none;border:none;font-size:12px;color:#B8C9D9;cursor:pointer;font-family:'Barlow',sans-serif;padding:4px;">Not yet</button>
         </div>
       </div>
 
       <div class="form-section" id="form-section">
-        <div class="form-title">One step to see your estimate</div>
+        <div class="form-title">One last step</div>
         <input type="text" id="h-pot" style="display:none;position:absolute;left:-9999px;" tabindex="-1" autocomplete="off">
-        <div class="form-row">
-          <div class="form-field"><input type="text" id="f-name" placeholder="Your name" autocomplete="name"></div>
-          <div class="form-field"><input type="email" id="f-email" placeholder="Your email"></div>
-        </div>
-        <div class="form-row">
-          <div class="form-field"><input type="tel" id="f-phone" placeholder="Your phone"></div>
-          <div class="form-field"><input type="text" id="f-zip" placeholder="Your zip code" maxlength="5"></div>
-        </div>
+        <div class="form-field"><input type="text" id="f-name" placeholder="Your first name" autocomplete="given-name"></div>
+        <div class="form-field"><input type="tel" id="f-phone" placeholder="Best phone number" autocomplete="tel" inputmode="numeric"></div>
+        <div class="form-field"><input type="email" id="f-email" placeholder="Email address" autocomplete="email"></div>
         <div class="check-wrap">
           <input type="checkbox" id="f-agree" onchange="toggleSubmit()">
-          <label class="check-label" for="f-agree">By submitting I agree I may be contacted by one local installer about my estimate.</label>
+          <label class="check-label" for="f-agree">By submitting I agree I may be contacted by one local installer about my search.</label>
         </div>
-        <button class="btn-submit" id="btn-submit" disabled onclick="submitForm()">Submit</button>
+        <button class="btn-submit" id="btn-submit" disabled onclick="submitForm()" style="background:#27AE60;">Get My Instant Estimate &#x2192;</button>
       </div>
 
       <div class="price-reveal" id="price-reveal">
         <div style="background:rgba(39,174,96,0.08);border:1px solid rgba(39,174,96,0.2);border-radius:12px;padding:14px 16px;margin-bottom:14px;">
-          <div style="font-size:14px;font-weight:700;color:#1A6B3A;margin-bottom:2px;">&#10003; Got it — here's your instant estimate.</div>
+          <div style="font-size:14px;font-weight:600;color:#1A6B3A;margin-bottom:2px;">&#10003; Got it — here's your instant estimate.</div>
           <div id="reveal-confirm" style="font-size:12px;color:#4A8A5A;line-height:1.5;"></div>
         </div>
         <div class="est-box">
           <div class="est-eyebrow" id="reveal-eyebrow">Installation estimate</div>
           <div class="est-range" id="reveal-range"></div>
           <div class="est-note" id="reveal-note"></div>
+          <div style="font-size:11px;color:#B8C9D9;margin-top:8px;font-style:italic;line-height:1.6;">These are estimates only. Your actual installation cost will vary based on equipment brand, site conditions, and permit fees.</div>
         </div>
         <div class="savings-table">
           <div class="savings-row" id="federal-row"><span>Federal tax credit (IRA)</span><span id="federal-amt">up to &#8211;$2,000</span></div>
@@ -488,7 +444,7 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
       </div>
 
       <div class="not-yet" id="not-yet">
-        <div class="not-yet-msg"><strong>No problem at all</strong> — come back when you're ready.<br>Your recommendation will still be here.</div>
+        <div class="not-yet-msg"><strong>No problem</strong> — come back when you're ready.<br>Your recommendation will still be here.</div>
       </div>
 
       <button class="restart-btn" onclick="restartCalc()">&#x2190; Start over</button>
@@ -504,33 +460,10 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
   </div>
 </div>
 
-<!-- SYSTEMS -->
-<div class="section" id="systems" style="padding-top:32px;">
-  <div class="section-eyebrow">Cooling Options</div>
-  <div class="section-title">AC Systems for Snohomish County</div>
-  <div class="section-sub">Local 2026 pricing — installed cost</div>
-  <div class="systems-grid">
-    <div class="system-card"><div class="system-name">Central AC</div><div class="system-desc">Best for homes with existing ductwork. Cools the whole home evenly. Most cost-effective replacement for ducted homes.</div></div>
-    <div class="system-card"><div class="system-name">Ducted Heat Pump</div><div class="system-desc">Heats AND cools using existing ducts. Most efficient for PNW climate. Qualifies for federal tax credit up to $2,000.</div><div class="system-tag">Federal credit eligible</div></div>
-    <div class="system-card"><div class="system-name">Ductless Mini Split</div><div class="system-desc">Single zone — perfect for one room or addition. No ductwork needed. Heats and cools year round.</div><div class="system-tag">Federal credit eligible</div></div>
-    <div class="system-card"><div class="system-name">Multi-Zone Ductless</div><div class="system-desc">Multiple wall units from one outdoor system. Whole-home cooling without ductwork. Each room controlled independently.</div><div class="system-tag">Federal credit eligible</div></div>
-  </div>
-</div>
-
-<!-- SECOND CTA -->
-<div class="section">
-  <div class="second-cta-box">
-    <div class="second-cta-title">Don't Pay More Than You Have To</div>
-    <div class="second-cta-sub">Free · Takes 2 minutes · No obligation</div>
-    <button class="second-cta-btn" onclick="startSelector()">Get Started →</button>
-  </div>
-</div>
 
 <!-- FAQ -->
 <div class="section" id="faq">
-  <div class="section-eyebrow">Common Questions</div>
-  <div class="section-title">AC System FAQ</div>
-  <div class="section-sub">Specific to Snohomish County homeowners</div>
+  <div class="section-title">Questions to Ask Before Choosing a Cooling System</div>
   <div class="faq-list">
     <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What type of AC is best for a home without ductwork?<span class="faq-icon">+</span></button><div class="faq-a">For homes without ductwork in Snohomish County, a ductless mini split or multi-zone ductless heat pump is almost always the right choice. No major construction required — installation typically takes one day per zone.</div></div>
     <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is central air or ductless better for Snohomish County?<span class="faq-icon">+</span></button><div class="faq-a">If your home has ductwork in good condition, central AC or a ducted heat pump is usually the most cost-effective choice. Without ductwork, ductless is more practical. For Pacific Northwest climates, heat pumps outperform standard AC for year-round efficiency.</div></div>
@@ -540,6 +473,14 @@ body{font-family:"Barlow",sans-serif;background:var(--navy);color:var(--white);l
     <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How long does AC installation take?<span class="faq-icon">+</span></button><div class="faq-a">Most ductless mini split installations in Mill Creek are completed in one day. Central AC with existing ductwork takes 1–2 days. Jobs requiring new ductwork may take 3–5 days.</div></div>
     <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is a mini split and how does it work?<span class="faq-icon">+</span></button><div class="faq-a">A mini split is a heating and cooling system that requires no ductwork. It has two main parts — an outdoor compressor and one or more indoor wall-mounted units connected by a small conduit. Mini splits are popular in Snohomish County homes without existing ductwork and heat and cool year-round.</div></div>
     <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is a mini split better than window AC units?<span class="faq-icon">+</span></button><div class="faq-a">For most Snohomish County homeowners, yes. Mini splits are quieter, more efficient, heat AND cool, and don't block windows. They cost more upfront but last 15–20 years, qualify for federal tax credits up to $2,000, and provide consistent year-round comfort.</div></div>
+  </div>
+</div>
+
+<!-- SECOND CTA -->
+<div class="section">
+  <div class="second-cta-box">
+    <div class="second-cta-title">Get Your Free AC Recommendation</div>
+    <button class="second-cta-btn" onclick="startSelector()">Get Started →</button>
   </div>
 </div>
 
@@ -564,11 +505,11 @@ const state={homeType:null,homeTypeLabel:null,zones:null,zonesLabel:null,stories
 const WEBHOOK="https://hook.us2.make.com/hmenfw6iwamhalxej725wzldgy201c1m";
 
 const pricing={
-  "ductless-single":{u1500:{range:"$4,000 – $6,500",net:"$2,000 – $4,500",credit:true},"1500-2500":{range:"$5,500 – $8,500",net:"$3,500 – $6,500",credit:true},"2500-3500":{range:"$7,000 – $10,000",net:"$5,000 – $8,000",credit:true},o3500:{range:"$8,500 – $12,000",net:"$6,500 – $10,000",credit:true}},
-  "ductless-multi":{u1500:{range:"$7,500 – $11,000",net:"$5,500 – $9,000",credit:true},"1500-2500":{range:"$9,000 – $14,000",net:"$7,000 – $12,000",credit:true},"2500-3500":{range:"$12,000 – $17,000",net:"$10,000 – $15,000",credit:true},o3500:{range:"$17,000 – $24,000",net:"$15,000 – $22,000",credit:true}},
-  "ducted-heat-pump":{u1500:{range:"$7,000 – $10,500",net:"$5,000 – $8,500",credit:true},"1500-2500":{range:"$9,000 – $13,500",net:"$7,000 – $11,500",credit:true},"2500-3500":{range:"$12,000 – $17,500",net:"$10,000 – $15,500",credit:true},o3500:{range:"$16,000 – $23,000",net:"$14,000 – $21,000",credit:true}},
-  "central-ac":{u1500:{range:"$5,500 – $7,500",net:"$5,500 – $7,500",credit:false},"1500-2500":{range:"$6,500 – $9,000",net:"$6,500 – $9,000",credit:false},"2500-3500":{range:"$8,000 – $11,000",net:"$8,000 – $11,000",credit:false},o3500:{range:"$10,000 – $14,000",net:"$10,000 – $14,000",credit:false}},
-  "assessment":{u1500:{range:"$4,000 – $12,000",net:"$4,000 – $12,000",credit:false},"1500-2500":{range:"$5,500 – $17,000",net:"$5,500 – $17,000",credit:false},"2500-3500":{range:"$7,000 – $22,000",net:"$7,000 – $22,000",credit:false},o3500:{range:"$10,000 – $24,000",net:"$10,000 – $24,000",credit:false}}
+  "ductless-single":{u1500:{range:"$3,500 – $5,500",net:"$1,500 – $3,500",credit:true},"1500-2500":{range:"$4,500 – $6,500",net:"$2,500 – $4,500",credit:true},"2500-3500":{range:"$5,500 – $8,000",net:"$3,500 – $6,000",credit:true},o3500:{range:"$7,000 – $10,000",net:"$5,000 – $8,000",credit:true}},
+  "ductless-multi":{u1500:{range:"$6,500 – $9,500",net:"$4,500 – $7,500",credit:true},"1500-2500":{range:"$9,000 – $13,000",net:"$7,000 – $11,000",credit:true},"2500-3500":{range:"$12,000 – $16,000",net:"$10,000 – $14,000",credit:true},o3500:{range:"$16,000 – $22,000",net:"$14,000 – $20,000",credit:true}},
+  "ducted-heat-pump":{u1500:{range:"$7,500 – $10,000",net:"$5,000 – $8,200",credit:true},"1500-2500":{range:"$9,000 – $12,500",net:"$6,500 – $10,000",credit:true},"2500-3500":{range:"$11,000 – $15,000",net:"$8,500 – $12,500",credit:true},o3500:{range:"$14,000 – $19,000",net:"$11,500 – $16,500",credit:true}},
+  "central-ac":{u1500:{range:"$4,500 – $6,500",net:"$4,500 – $6,500",credit:false},"1500-2500":{range:"$5,500 – $7,500",net:"$5,500 – $7,500",credit:false},"2500-3500":{range:"$7,000 – $10,000",net:"$7,000 – $10,000",credit:false},o3500:{range:"$9,000 – $13,000",net:"$9,000 – $13,000",credit:false}},
+  "assessment":{u1500:{range:"$3,500 – $10,000",net:"$3,500 – $10,000",credit:false},"1500-2500":{range:"$5,000 – $15,000",net:"$5,000 – $15,000",credit:false},"2500-3500":{range:"$7,000 – $19,000",net:"$7,000 – $19,000",credit:false},o3500:{range:"$9,000 – $22,000",net:"$9,000 – $22,000",credit:false}}
 };
 
 const systems={
@@ -578,6 +519,8 @@ const systems={
   "central-ac":{name:"Central AC",fits:["Uses existing ductwork","Whole-home cooling","Most affordable ducted option","Familiar system — easy to maintain"]},
   "assessment":{name:"Professional Assessment Recommended",fits:["Free estimate — no obligation","Same-day response available","Licensed and insured specialist","Will confirm best system on-site"]}
 };
+
+const stepMap={1:["zones","zonesLabel"],2:["stories","storiesLabel"],3:["ducts","ductsLabel"],4:["size","sizeLabel"]};
 
 function getRecommendation(){
   const{ducts,zones,stories}=state;
@@ -592,30 +535,20 @@ function getRecommendation(){
 }
 
 function getWhy(k){
-  const{stories,city,cooling}=state;
   const sm={single:"single-story",multi:"two-story",split:"split-level"};
-  const cm={yes:"replacing an existing system",no:"adding cooling for the first time","not-sure":"exploring cooling options"};
   const w={
-    "ductless-single":`No ductwork is needed — a single wall-mounted unit handles your zone efficiently. For a ${sm[stories]||""} home in ${city} ${cm[cooling]||""}, this is the most practical and cost-effective option.`,
-    "ductless-multi":`Without ductwork, multiple wall-mounted units from one outdoor system give you whole-home coverage without major construction. Each room gets its own temperature control — the most efficient solution for ${city} homes.`,
-    "ducted-heat-pump":`Your existing ductwork makes a ducted heat pump the smartest upgrade. It uses your current vents, heats and cools the whole home, and outperforms a standard AC unit for Pacific Northwest winters in ${city}.`,
-    "central-ac":`Your existing ductwork makes central AC the most straightforward and cost-effective option for your ${city} home. Clean whole-home cooling without the complexity of a full heat pump system.`,
-    "assessment":`Based on your answers, the best system depends on factors a specialist needs to confirm on-site in ${city} — ductwork condition, panel capacity, and home layout all affect the recommendation. A free estimate will narrow this down.`
+    "ductless-single":`No ductwork is needed — a single wall-mounted unit handles your zone efficiently. For a ${sm[state.stories]||""} home in ${state.city}, this is the most practical and cost-effective option.`,
+    "ductless-multi":`Without ductwork, multiple wall-mounted units from one outdoor system give you whole-home coverage without major construction. Each room gets its own temperature control — the most efficient solution for ${state.city} homes.`,
+    "ducted-heat-pump":`Your existing ductwork makes a ducted heat pump the smartest upgrade. It uses your current vents, heats and cools the whole home, and outperforms a standard AC unit for Pacific Northwest winters in ${state.city}.`,
+    "central-ac":`Your existing ductwork makes central AC the most straightforward and cost-effective option for your ${state.city} home. Clean whole-home cooling without the complexity of a full heat pump system.`,
+    "assessment":`Based on your answers, the best system depends on factors a specialist needs to confirm on-site in ${state.city}. A free estimate will narrow this down quickly.`
   };
   return w[k]||"";
 }
 
-function startSelector(){
-  const c=document.getElementById("calc-card");
-  c.classList.add("active");
-  setTimeout(()=>c.scrollIntoView({behavior:"smooth",block:"start"}),100);
-}
-
-function pick(el,step,val,label){
-  el.closest(".options").querySelectorAll(".opt").forEach(o=>o.classList.remove("selected"));
-  el.classList.add("selected");
-  const m={1:["homeType","homeTypeLabel"],2:["zones","zonesLabel"],3:["stories","storiesLabel"],4:["cooling","coolingLabel"],5:["ducts","ductsLabel"],6:["size","sizeLabel"]};
-  if(m[step]){state[m[step][0]]=val;state[m[step][1]]=label;}
+function onSelect(step,val,label){
+  if(!val)return;
+  if(stepMap[step]){state[stepMap[step][0]]=val;state[stepMap[step][1]]=label;}
   const btn=document.getElementById("next-"+step);
   if(btn)btn.disabled=false;
 }
@@ -624,16 +557,22 @@ function pickCity(val){
   if(!val)return;
   state.city=val;
   const msg=document.getElementById("city-msg");
-  msg.textContent="✓ Got it — pulling results for "+val;
-  document.getElementById("next-7").disabled=false;
+  if(msg){msg.textContent="✓ Great — we serve "+val;}
+  document.getElementById("next-5").disabled=false;
+}
+
+function startSelector(){
+  const c=document.getElementById("calc-card");
+  c.classList.add("active");
+  setTimeout(()=>c.scrollIntoView({behavior:"smooth",block:"start"}),100);
 }
 
 function goTo(n){
-  document.querySelectorAll(".step-panel").forEach(p=>p.classList.remove("active"));
-  for(let i=1;i<=7;i++){const s=document.getElementById("seg-"+i);if(s)s.className="prog-seg"+(i<n?" done":i===n?" active":"");}
-  document.getElementById("prog-label").textContent="Question "+n+" of 7";
-  const p=document.getElementById("step-"+n);
-  if(p)p.classList.add("active");
+  document.querySelectorAll(".step-panel").forEach(p=>{p.classList.remove("active","fade-in");});
+  for(let i=1;i<=5;i++){const s=document.getElementById("seg-"+i);if(s)s.className="prog-seg"+(i<n?" done":i===n?" active":"");}
+  document.getElementById("prog-label").textContent="Question "+n+" of 5";
+  const sp=document.getElementById("step-"+n);
+  if(sp){sp.classList.add("active");void sp.offsetWidth;sp.classList.add("fade-in");}
 }
 
 function showLoading(){
@@ -655,19 +594,19 @@ function buildResult(){
   const sys=systems[recKey];
   const sm={single:"single-story",multi:"two-story",split:"split-level"};
   const dm={yes:"with existing ductwork",no:"without ductwork","not-sure":""};
-  const cm={yes:"replacing an existing system",no:"adding cooling for the first time","not-sure":"exploring cooling options"};
-  const zm={one:"cooling one room or zone",few:"cooling 2–3 rooms",whole:"cooling the whole home"};
-  let intro=`Based on what you shared — a <strong>${sm[state.stories]||""} ${state.city}</strong> home ${dm[state.ducts]||""}, ${cm[state.cooling]||""}, ${zm[state.zones]||""} — here's what we recommend:`;
+  const zm={one:"cooling one room",few:"cooling 2–3 rooms",whole:"cooling the whole home"};
+  let intro=`Based on what you shared — a <strong>${sm[state.stories]||""} ${state.city}</strong> home ${dm[state.ducts]||""}, ${zm[state.zones]||""} — here's what we recommend:`;
   document.getElementById("result-intro").innerHTML=intro;
   document.getElementById("rec-system").textContent=sys.name;
   document.getElementById("rec-why").textContent=getWhy(recKey);
   const fitEl=document.getElementById("fit-list");
   fitEl.innerHTML=sys.fits.map(f=>`<div class="fit-item"><span class="fit-check">✓</span>${f}</div>`).join("");
-  document.getElementById("cta-q").textContent="See what homeowners in "+state.city+" are paying for similar installations.";
-  for(let i=1;i<=7;i++){const s=document.getElementById("seg-"+i);if(s)s.className="prog-seg done";}
+  document.getElementById("cta-q").textContent="Do you want to see what homeowners in "+state.city+" are paying for similar installations?";
+  for(let i=1;i<=5;i++){const s=document.getElementById("seg-"+i);if(s)s.className="prog-seg done";}
   document.getElementById("prog-label").textContent="Your recommendation";
   document.getElementById("result-panel").classList.add("active");
   document.querySelector(".calc-card").scrollIntoView({behavior:"smooth",block:"start"});
+  fetch(WEBHOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({lead_type:"cold",source:"ac-selector",timestamp:new Date().toISOString(),home_type:state.homeTypeLabel,zones:state.zonesLabel,stories:state.storiesLabel,cooling:state.coolingLabel,ducts:state.ductsLabel,size:state.sizeLabel,city:state.city,recommendation:sys.name})}).catch(()=>{});
   gtag("event","selector_result_shown",{send_to:"AW-17039190320",recommendation:sys.name,city:state.city});
 }
 
@@ -676,22 +615,19 @@ function toggleSubmit(){document.getElementById("btn-submit").disabled=!document
 
 async function submitForm(){
   const name=document.getElementById("f-name").value.trim();
-  const email=document.getElementById("f-email").value.trim();
   const phone=document.getElementById("f-phone").value.trim();
-  const zip=document.getElementById("f-zip").value.trim();
-  if(!name||name.length<2){alert("Please enter your full name.");return;}
-  if(!email||!email.includes("@")){alert("Please enter a valid email address.");return;}
+  const email=document.getElementById("f-email").value.trim();
+  if(!name||name.length<2){alert("Please enter your name.");return;}
   const phoneDigits=phone.replace(/\D/g,"");
   if(phoneDigits.length<10){alert("Please enter a valid 10-digit phone number.");return;}
-  if(!zip||zip.length<5){alert("Please enter your zip code.");return;}
+  if(!email||!email.includes("@")){alert("Please enter a valid email address.");return;}
   if(document.getElementById("h-pot").value!=="")return;
   const recKey=getRecommendation();
   const sys=systems[recKey];
   const priceData=pricing[recKey][state.size]||pricing[recKey]["1500-2500"];
   const btn=document.getElementById("btn-submit");
-  btn.textContent="Getting your estimate...";
-  btn.disabled=true;
-  const payload={lead_type:"hot",source:"ac-selector",timestamp:new Date().toISOString(),home_type:state.homeTypeLabel,recommendation:sys.name,ducts:state.ductsLabel,existing_cooling:state.coolingLabel,zones:state.zonesLabel,stories:state.storiesLabel,size:state.sizeLabel,city:state.city,estimate_range:priceData.range,net_estimate:priceData.net,name,email,phone,zip};
+  btn.textContent="Getting your estimate...";btn.disabled=true;
+  const payload={lead_type:"hot",source:"ac-selector",timestamp:new Date().toISOString(),recommendation:sys.name,ducts:state.ductsLabel,zones:state.zonesLabel,stories:state.storiesLabel,size:state.sizeLabel,city:state.city,estimate_range:priceData.range,net_estimate:priceData.net,name,phone,email};
   try{await fetch(WEBHOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});}catch(e){}
   document.getElementById("form-section").classList.remove("active");
   revealPrice(recKey,priceData);
@@ -714,16 +650,16 @@ function showNotYet(){document.getElementById("cta-box").style.display="none";do
 
 function restartCalc(){
   Object.keys(state).forEach(k=>state[k]=null);
-  document.querySelectorAll(".opt").forEach(o=>o.classList.remove("selected"));
+  [1,2,3,4].forEach(i=>{const s=document.getElementById("sel-"+i);if(s)s.value="";});
   document.getElementById("city-select").value="";
   document.getElementById("city-msg").textContent="";
-  for(let i=1;i<=7;i++){const n=document.getElementById("next-"+i);if(n)n.disabled=true;}
+  for(let i=1;i<=5;i++){const n=document.getElementById("next-"+i);if(n)n.disabled=true;}
   document.getElementById("result-panel").classList.remove("active");
   document.getElementById("form-section").classList.remove("active");
   document.getElementById("price-reveal").classList.remove("active");
   document.getElementById("not-yet").classList.remove("active");
   document.getElementById("cta-box").style.display="block";
-  document.getElementById("btn-submit").textContent="Submit";
+  document.getElementById("btn-submit").textContent="Get My Free Estimate →";
   document.getElementById("btn-submit").disabled=true;
   document.getElementById("f-agree").checked=false;
   document.getElementById("federal-row").style.display="flex";
@@ -733,10 +669,9 @@ function restartCalc(){
 }
 
 function toggleFaq(btn){
-  const a=btn.nextElementSibling;
-  const open=btn.classList.contains("open");
-  document.querySelectorAll(".faq-q").forEach(b=>{b.classList.remove("open");b.nextElementSibling.classList.remove("open");});
-  if(!open){btn.classList.add("open");a.classList.add("open");}
+  const a=btn.nextElementSibling,open=btn.classList.contains("open");
+  document.querySelectorAll(".faq-q").forEach(b=>{b.classList.remove("open");if(b.nextElementSibling)b.nextElementSibling.classList.remove("open");});
+  if(!open){btn.classList.add("open");if(a)a.classList.add("open");}
 }
 </script>
 </body>
