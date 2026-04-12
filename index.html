@@ -57,7 +57,7 @@ body { font-family: 'Roboto', sans-serif; background: var(--navy); color: var(--
 /* HERO TRUST */
 .hero-trust { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; margin-top: 20px; }
 .hero-trust-item { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.95); text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 5px; }
-.hero-trust-item span { color: var(–accent); }
+.hero-trust-item span { color: #27AE60; }
 
 /* CALC */
 .calc-wrap { max-width: 600px; margin: 0 auto; padding: 32px 16px 6px; }
@@ -212,13 +212,13 @@ body { font-family: 'Roboto', sans-serif; background: var(--navy); color: var(--
       </select>
     </div>
     <button class="btn-get-started" id="hero-cta" onclick="heroStart()">
-      See Your Options <span>&#8594;</span>
+      Get Started <span>&#8594;</span>
     </button>
   </div>
 
   <div class="hero-trust">
     <div class="hero-trust-item"><span>&#10003;</span> No info required</div>
-    <div class="hero-trust-item"><span>&#10003;</span> Know your options</div>
+    <div class="hero-trust-item"><span>&#10003;</span> Free — no obligation</div>
     <div class="hero-trust-item"><span>&#10003;</span> See costs instantly</div>
   </div>
 </div>
@@ -448,11 +448,16 @@ function heroSelectChange(val){ state.zones = val || null; }
 
 function heroStart(){
   const sel = document.getElementById('hero-zones-select');
-  if(sel && sel.value){
-    const labels = { one: "One room or zone", few: "2–3 rooms", whole: "Whole home" };
-    state.zones = sel.value;
-    state.zonesLabel = labels[sel.value] || sel.value;
+  if(!sel || !sel.value){
+    // Nudge — flash border red briefly
+    const wrap = document.querySelector('.intake-select-wrap');
+    if(wrap){ wrap.style.outline = '2px solid #E74C3C'; wrap.style.outlineOffset = '-2px'; setTimeout(() => { wrap.style.outline = ''; }, 1200); }
+    sel.focus();
+    return;
   }
+  const labels = { one: "One room or zone", few: "2–3 rooms", whole: "Whole home" };
+  state.zones = sel.value;
+  state.zonesLabel = labels[sel.value] || sel.value;
   const c = document.getElementById('calc-card');
   c.classList.add('active');
   const heroCta = document.getElementById('hero-cta');
