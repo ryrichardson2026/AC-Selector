@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -33,26 +32,26 @@ html { overflow-x: hidden; }
 body { font-family: 'Roboto', sans-serif; background: var(--navy); color: var(--white); line-height: 1.6; overflow-x: hidden; }
 
 /* NAV */
-.nav { position: sticky; top: 0; z-index: 100; background: var(–navy2); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 20px; display: flex; align-items: center; height: 52px; }
-.nav-brand { font-family: ‘Roboto’, sans-serif; font-size: 13px; font-weight: 700; color: var(–orange); text-transform: uppercase; letter-spacing: 2px; margin-right: auto; text-decoration: none; }
-.nav-phone { font-size: 13px; font-weight: 700; color: var(–orange); text-decoration: none; }
+.nav { position: sticky; top: 0; z-index: 100; background: var(--navy2); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 20px; display: flex; align-items: center; height: 52px; }
+.nav-brand { font-family: 'Roboto', sans-serif; font-size: 13px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 2px; margin-right: auto; text-decoration: none; }
+.nav-phone { font-size: 13px; font-weight: 700; color: var(--orange); text-decoration: none; }
 
 /* HERO */
-.hero { background: url(‘hero-bg.jpg’) center center / cover no-repeat; position: relative; padding: 64px 20px 48px; text-align: center; border-bottom: 3px solid var(–accent); }
-.hero::before { content: ‘’; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,22,40,0.70) 0%, rgba(10,22,40,0.88) 100%); z-index: 0; }
+.hero { background: url('hero-bg.jpg') center center / cover no-repeat; position: relative; padding: 64px 20px 48px; text-align: center; border-bottom: 3px solid var(--accent); }
+.hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,22,40,0.70) 0%, rgba(10,22,40,0.88) 100%); z-index: 0; }
 .hero > * { position: relative; z-index: 1; }
-.hero-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: rgba(91,164,232,0.1); border: 1px solid rgba(91,164,232,0.25); color: var(–accent); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 18px; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: rgba(91,164,232,0.1); border: 1px solid rgba(91,164,232,0.25); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 18px; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
-.hero h1 { font-family: ‘Roboto Slab’, serif; font-size: clamp(24px, 5vw, 38px); font-weight: 700; color: var(–white); line-height: 1.15; margin-bottom: 14px; }
+.hero h1 { font-family: 'Roboto Slab', serif; font-size: clamp(24px, 5vw, 38px); font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 14px; }
 .hero-sub { font-size: 15px; color: rgba(255,255,255,0.6); max-width: 400px; margin: 0 auto 28px; line-height: 1.6; }
 
 /* INTAKE ROW */
 .intake-row { display: flex; align-items: stretch; justify-content: center; gap: 0; max-width: 420px; margin: 0 auto; border: 1.5px solid rgba(255,255,255,0.25); overflow: hidden; }
 .intake-select-wrap { position: relative; flex: 1; background: rgba(255,255,255,0.95); display: flex; align-items: center; }
-.intake-select-wrap::after { content: ‘’; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 10px; height: 6px; background: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘10’ height=‘6’ viewBox=‘0 0 10 6’%3E%3Cpath d=‘M1 1l4 4 4-4’ stroke=’%234A6A8A’ stroke-width=‘1.5’ fill=‘none’ stroke-linecap=‘round’/%3E%3C/svg%3E”) no-repeat center; pointer-events: none; }
-.intake-select-wrap select { width: 100%; height: 50px; border: none; outline: none; font-family: ‘Roboto’, sans-serif; font-size: 14px; font-weight: 500; color: #0D1F3C; background: transparent; appearance: none; -webkit-appearance: none; padding: 0 34px 0 14px; cursor: pointer; }
-.btn-get-started { display: flex; align-items: center; justify-content: center; gap: 6px; background: var(–blue); border: none; border-left: 1.5px solid rgba(255,255,255,0.15); padding: 0 20px; height: 50px; font-family: ‘Roboto’, sans-serif; font-size: 13px; font-weight: 700; color: var(–white); text-transform: uppercase; letter-spacing: 0.8px; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: background 0.15s; }
-.btn-get-started:hover { background: var(–blue2); }
+.intake-select-wrap::after { content: ''; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 10px; height: 6px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%234A6A8A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center; pointer-events: none; }
+.intake-select-wrap select { width: 100%; height: 50px; border: none; outline: none; font-family: 'Roboto', sans-serif; font-size: 14px; font-weight: 500; color: #0D1F3C; background: transparent; appearance: none; -webkit-appearance: none; padding: 0 34px 0 14px; cursor: pointer; }
+.btn-get-started { display: flex; align-items: center; justify-content: center; gap: 6px; background: var(--blue); border: none; border-left: 1.5px solid rgba(255,255,255,0.15); padding: 0 20px; height: 50px; font-family: 'Roboto', sans-serif; font-size: 13px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.8px; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: background 0.15s; }
+.btn-get-started:hover { background: var(--blue2); }
 
 /* HERO TRUST */
 .hero-trust { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; margin-top: 20px; }
@@ -61,141 +60,139 @@ body { font-family: 'Roboto', sans-serif; background: var(--navy); color: var(--
 
 /* CALC */
 .calc-wrap { max-width: 600px; margin: 0 auto; padding: 32px 16px 6px; }
-.calc-card { background: var(–white); border-radius: 4px; overflow: hidden; border: 1px solid var(–border); box-shadow: 0 2px 16px rgba(13,33,55,0.08); display: none; }
+.calc-card { background: var(--white); border-radius: 4px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 2px 16px rgba(13,33,55,0.08); display: none; }
 .calc-card.active { display: block; }
 
 /* PROGRESS */
-.progress-bar { background: var(–border); display: flex; gap: 2px; align-items: center; padding: 12px 20px; border-bottom: 1px solid var(–border); }
-.prog-seg { flex: 1; height: 3px; background: var(–border); border-radius: 2px; transition: background 0.3s; }
+.progress-bar { background: var(--border); display: flex; gap: 2px; align-items: center; padding: 12px 20px; border-bottom: 1px solid var(--border); }
+.prog-seg { flex: 1; height: 3px; background: var(--border); border-radius: 2px; transition: background 0.3s; }
 .prog-seg.done { background: rgba(27,111,200,0.35); }
-.prog-seg.active { background: var(–accent); }
-.prog-label { font-size: 11px; font-weight: 600; color: var(–muted); letter-spacing: 0.5px; margin-left: 10px; white-space: nowrap; }
+.prog-seg.active { background: var(--accent); }
+.prog-label { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.5px; margin-left: 10px; white-space: nowrap; }
 
 /* STEP */
 .step-body { padding: 32px 28px 0; text-align: center; }
 .step-panel { display: none; }
 .step-panel.active { display: block; }
-.step-q { font-family: ‘Roboto Slab’, serif; font-size: 24px; font-weight: 700; color: var(–dark); line-height: 1.25; margin-bottom: 0; }
+.step-q { font-family: 'Roboto Slab', serif; font-size: 24px; font-weight: 700; color: var(--dark); line-height: 1.25; margin-bottom: 0; }
 
 /* OPTIONS */
 .options { display: flex; flex-direction: column; gap: 0; margin: 20px auto 0; max-width: 380px; }
-.opt { border: none; border-top: 1px solid var(–border); border-radius: 0; padding: 16px 20px; cursor: pointer; transition: background 0.12s, color 0.12s; background: var(–white); text-align: center; display: flex; align-items: center; justify-content: center; width: 100%; }
-.opt:last-child { border-bottom: 1px solid var(–border); }
-.opt:hover { background: var(–blue); }
-.opt:hover .opt-label { color: var(–white); }
-.opt.selected { background: var(–blue); }
-.opt.selected .opt-label { color: var(–white); }
-.opt-label { font-family: ‘Roboto Slab’, serif; font-size: 16px; font-weight: 400; color: var(–dark); line-height: 1.3; }
+.opt { border: none; border-top: 1px solid var(--border); border-radius: 0; padding: 16px 20px; cursor: pointer; transition: background 0.12s, color 0.12s; background: var(--white); text-align: center; display: flex; align-items: center; justify-content: center; width: 100%; }
+.opt:last-child { border-bottom: 1px solid var(--border); }
+.opt:hover { background: var(--blue); }
+.opt:hover .opt-label { color: var(--white); }
+.opt.selected { background: var(--blue); }
+.opt.selected .opt-label { color: var(--white); }
+.opt-label { font-family: 'Roboto Slab', serif; font-size: 16px; font-weight: 400; color: var(--dark); line-height: 1.3; }
 
 /* CITY SELECT */
-.city-select { width: 100%; max-width: 380px; display: block; margin: 20px auto 0; padding: 14px 36px 14px 16px; background: var(–white); border: none; border-top: 1px solid var(–border); border-bottom: 1px solid var(–border); font-size: 15px; font-weight: 500; color: var(–dark); font-family: ‘Roboto’, sans-serif; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; background-image: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘12’ height=‘8’ viewBox=‘0 0 12 8’%3E%3Cpath d=‘M1 1l5 5 5-5’ stroke=’%234A6A8A’ stroke-width=‘1.5’ fill=‘none’ stroke-linecap=‘round’/%3E%3C/svg%3E”); background-repeat: no-repeat; background-position: right 14px center; }
-.city-select option { background: var(–white); color: var(–dark); }
-.city-msg { font-size: 12px; color: var(–muted); margin-top: 8px; min-height: 18px; text-align: center; }
+.city-select { width: 100%; max-width: 380px; display: block; margin: 20px auto 0; padding: 14px 36px 14px 16px; background: var(--white); border: none; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); font-size: 15px; font-weight: 500; color: var(--dark); font-family: 'Roboto', sans-serif; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A6A8A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+.city-select option { background: var(--white); color: var(--dark); }
+.city-msg { font-size: 12px; color: var(--muted); margin-top: 8px; min-height: 18px; text-align: center; }
 
 /* NAV BUTTONS */
 .step-nav { display: flex; gap: 12px; padding: 20px 28px 28px; align-items: center; justify-content: center; }
-.btn-back { background: none; border: none; border-radius: 0; padding: 12px 0; font-size: 13px; font-weight: 500; color: var(–muted); cursor: pointer; font-family: ‘Roboto’, sans-serif; transition: color 0.15s; letter-spacing: 0.5px; text-transform: uppercase; }
-.btn-back:hover { color: var(–dark); }
-.btn-continue { flex: 1; background: var(–green); border: none; border-radius: 0; padding: 14px 20px; font-family: ‘Roboto’, sans-serif; font-size: 13px; font-weight: 700; color: var(–white); cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: background 0.15s; }
+.btn-back { background: none; border: none; border-radius: 0; padding: 12px 0; font-size: 13px; font-weight: 500; color: var(--muted); cursor: pointer; font-family: 'Roboto', sans-serif; transition: color 0.15s; letter-spacing: 0.5px; text-transform: uppercase; }
+.btn-back:hover { color: var(--dark); }
+.btn-continue { flex: 1; background: var(--green); border: none; border-radius: 0; padding: 14px 20px; font-family: 'Roboto', sans-serif; font-size: 13px; font-weight: 700; color: var(--white); cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: background 0.15s; }
 .btn-continue:hover { background: #219A52; }
 .btn-continue:disabled { opacity: 0.25; cursor: not-allowed; }
 
 /* LOADING */
-.loading-panel { display: none; padding: 52px 26px; text-align: center; background: var(–light); }
+.loading-panel { display: none; padding: 52px 26px; text-align: center; background: var(--light); }
 .loading-panel.active { display: block; }
-.loading-msg { font-family: ‘Roboto Slab’, serif; font-size: 18px; font-weight: 700; color: var(–dark); margin-bottom: 22px; line-height: 1.4; }
-.bar-track { background: var(–border); border-radius: 4px; height: 3px; max-width: 260px; margin: 0 auto 10px; overflow: hidden; }
-.bar-fill { height: 100%; width: 0%; background: var(–accent); border-radius: 4px; transition: width 0.04s linear; }
-.bar-pct { font-size: 12px; color: var(–muted); font-weight: 600; }
+.loading-msg { font-family: 'Roboto Slab', serif; font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 22px; line-height: 1.4; }
+.bar-track { background: var(--border); border-radius: 4px; height: 3px; max-width: 260px; margin: 0 auto 10px; overflow: hidden; }
+.bar-fill { height: 100%; width: 0%; background: var(--accent); border-radius: 4px; transition: width 0.04s linear; }
+.bar-pct { font-size: 12px; color: var(--muted); font-weight: 600; }
 
 /* RESULT */
-.result-panel { display: none; background: var(–white); }
+.result-panel { display: none; background: var(--white); }
 .result-panel.active { display: block; }
 
 /* RECOMMENDATION CARD */
-.rec-box { border: 3px solid var(–accent); border-radius: 4px; padding: 24px 24px 20px; margin: 20px 20px 10px; text-align: center; box-shadow: 0 4px 20px rgba(91,164,232,0.15); }
-.rec-verdict { font-family: ‘Roboto Slab’, serif; font-size: 36px; font-weight: 700; color: var(–dark); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 6px; }
-.rec-sub { font-size: 13px; color: var(–muted); line-height: 1.6; }
-.rec-why { font-size: 14px; color: var(–dim); line-height: 1.7; margin-top: 12px; }
+.rec-box { border: 3px solid var(--accent); border-radius: 4px; padding: 24px 24px 20px; margin: 20px 20px 10px; text-align: center; box-shadow: 0 4px 20px rgba(91,164,232,0.15); }
+.rec-verdict { font-family: 'Roboto Slab', serif; font-size: 36px; font-weight: 700; color: var(--dark); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 6px; }
+.rec-sub { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.rec-why { font-size: 14px; color: var(--dim); line-height: 1.7; margin-top: 12px; }
 
 /* PRICING */
-.pricing-box { background: var(–white); padding: 24px 28px; border-top: 1px solid var(–border); text-align: center; }
-.pricing-heading { font-family: ‘Roboto Slab’, serif; font-size: 22px; font-weight: 700; color: var(–dark); margin-bottom: 20px; }
+.pricing-box { background: var(--white); padding: 24px 28px; border-top: 1px solid var(--border); text-align: center; }
+.pricing-heading { font-family: 'Roboto Slab', serif; font-size: 22px; font-weight: 700; color: var(--dark); margin-bottom: 20px; }
 .pricing-col { text-align: center; padding: 0 20px; }
-.pricing-col-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(–accent); margin-bottom: 8px; }
-.pricing-col-val { font-family: ‘Roboto Slab’, serif; font-size: 28px; font-weight: 700; color: var(–blue); line-height: 1.2; }
+.pricing-col-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.pricing-col-val { font-family: 'Roboto Slab', serif; font-size: 28px; font-weight: 700; color: var(--blue); line-height: 1.2; }
 .pricing-asterisk { font-size: 11px; color: #9BB0C4; line-height: 1.6; margin-top: 14px; }
 
 /* SPECIALIST / CTA */
-.specialist-box { background: var(–white); border-top: 1px solid var(–border); padding: 24px 22px; text-align: center; }
-.specialist-availability { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: var(–green); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
-.pulse-green { width: 7px; height: 7px; background: var(–green); border-radius: 50%; animation: pulse 1.8s infinite; flex-shrink: 0; }
-.specialist-response-time { font-family: ‘Roboto Slab’, serif; font-size: 22px; font-weight: 700; color: var(–dark); margin-bottom: 10px; }
-.specialist-credentials { font-size: 13px; font-weight: 500; color: var(–muted); margin-bottom: 16px; }
+.specialist-box { background: var(--white); border-top: 1px solid var(--border); padding: 24px 22px; text-align: center; }
+.specialist-availability { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: var(--green); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+.pulse-green { width: 7px; height: 7px; background: var(--green); border-radius: 50%; animation: pulse 1.8s infinite; flex-shrink: 0; }
+.specialist-response-time { font-family: 'Roboto Slab', serif; font-size: 22px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+.specialist-credentials { font-size: 13px; font-weight: 500; color: var(--muted); margin-bottom: 16px; }
 .specialist-stars { font-size: 15px; font-weight: 700; letter-spacing: 1px; margin-bottom: 18px; }
 .specialist-stars .stars { color: #F4B942; }
-.specialist-stars .rated { color: var(–blue); font-family: ‘Roboto’, sans-serif; font-weight: 700; font-size: 13px; margin-left: 4px; }
-.specialist-validator { font-family: ‘Roboto Slab’, serif; font-size: 15px; font-weight: 700; color: var(–navy); text-align: center; line-height: 1.4; margin-bottom: 18px; padding: 0 8px; }
-.btn-unlock { width: 100%; background: var(–green); border: none; border-radius: 0; padding: 16px; font-size: 15px; font-weight: 700; color: var(–white); cursor: pointer; font-family: ‘Roboto’, sans-serif; margin-bottom: 10px; transition: background 0.15s; text-transform: uppercase; letter-spacing: 0.5px; }
+.specialist-stars .rated { color: var(--blue); font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 13px; margin-left: 4px; }
+.specialist-validator { font-family: 'Roboto Slab', serif; font-size: 15px; font-weight: 700; color: var(--navy); text-align: center; line-height: 1.4; margin-bottom: 18px; padding: 0 8px; }
+.btn-unlock { width: 100%; background: var(--green); border: none; border-radius: 0; padding: 16px; font-size: 15px; font-weight: 700; color: var(--white); cursor: pointer; font-family: 'Roboto', sans-serif; margin-bottom: 10px; transition: background 0.15s; text-transform: uppercase; letter-spacing: 0.5px; }
 .btn-unlock:hover { background: #219A52; }
 .antispam { font-size: 11px; color: #9BB0C4; text-align: center; margin-bottom: 6px; line-height: 1.5; }
 
 /* FORM */
-.form-section { display: none; margin-top: 20px; border-top: 1px solid var(–border); padding-top: 20px; }
+.form-section { display: none; margin-top: 20px; border-top: 1px solid var(--border); padding-top: 20px; }
 .form-field { margin-bottom: 10px; }
-.form-field input { width: 100%; padding: 14px 16px; border: none; border-radius: 0; font-size: 15px; font-family: ‘Roboto’, sans-serif; font-weight: 400; color: var(–dark); outline: none; background: #F0F4F8; transition: background 0.15s; }
+.form-field input { width: 100%; padding: 14px 16px; border: none; border-radius: 0; font-size: 15px; font-family: 'Roboto', sans-serif; font-weight: 400; color: var(--dark); outline: none; background: #F0F4F8; transition: background 0.15s; }
 .form-field input:focus { background: #E4EDF6; }
 .form-field input::placeholder { color: #8AAFC8; font-weight: 400; }
-.btn-submit { width: 100%; background: var(–green); border: none; border-radius: 0; padding: 16px; font-family: ‘Roboto’, sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(–white); cursor: pointer; margin-top: 8px; transition: background 0.15s; }
+.btn-submit { width: 100%; background: var(--green); border: none; border-radius: 0; padding: 16px; font-family: 'Roboto', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--white); cursor: pointer; margin-top: 8px; transition: background 0.15s; }
 .btn-submit:hover { background: #219A52; }
 .btn-submit:disabled { opacity: 0.25; cursor: not-allowed; }
 
 /* TRUST STRIP */
-.trust-strip { background: var(–navy2); border-top: 1px solid rgba(255,255,255,0.06); padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: center; }
+.trust-strip { background: var(--navy2); border-top: 1px solid rgba(255,255,255,0.06); padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: center; }
 .trust-item { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 5px; }
-.trust-check { color: var(–accent); }
+.trust-check { color: var(--accent); }
 
 /* AREA */
-.area-section { background: var(–navy2); border-top: 1px solid rgba(255,255,255,0.06); padding: 24px; text-align: center; }
-.area-eyebrow { font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(–dim); margin-bottom: 12px; }
+.area-section { background: var(--navy2); border-top: 1px solid rgba(255,255,255,0.06); padding: 24px; text-align: center; }
+.area-eyebrow { font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--dim); margin-bottom: 12px; }
 .area-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; max-width: 520px; margin: 0 auto; }
-.area-pill { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 5px 13px; font-size: 12px; font-weight: 600; color: var(–dim); }
+.area-pill { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 5px 13px; font-size: 12px; font-weight: 600; color: var(--dim); }
 
 /* FOOTER */
 .footer { background: #060F1E; padding: 20px 24px; text-align: center; border-top: 1px solid rgba(255,255,255,0.04); }
-.footer p { font-size: 11px; color: var(–dim); line-height: 2; text-transform: uppercase; letter-spacing: 0.5px; }
-.footer a { color: var(–dim); text-decoration: underline; }
+.footer p { font-size: 11px; color: var(--dim); line-height: 2; text-transform: uppercase; letter-spacing: 0.5px; }
+.footer a { color: var(--dim); text-decoration: underline; }
 
 /* RESTART */
-#btn-restart { display: none; background: none; border: none; font-size: 12px; color: #B8C9D9; cursor: pointer; font-family: ‘Roboto’, sans-serif; padding: 16px; width: 100%; text-align: center; border-top: 1px solid var(–border); }
+#btn-restart { display: none; background: none; border: none; font-size: 12px; color: #B8C9D9; cursor: pointer; font-family: 'Roboto', sans-serif; padding: 16px; width: 100%; text-align: center; border-top: 1px solid var(--border); }
 
 /* MOBILE */
 @media (max-width: 480px) {
-.step-body { padding: 24px 16px 0; }
-.options { margin: 16px auto 0; }
-.step-nav { padding: 16px 16px 24px; }
-.area-pills { gap: 5px; }
-.intake-row { flex-direction: column; max-width: 100%; margin: 0 20px; border: none; gap: 8px; }
-.intake-select-wrap { width: 100%; border: 1.5px solid rgba(255,255,255,0.25); border-radius: 0; }
-.intake-select-wrap select { height: 50px; font-size: 15px; }
-.btn-get-started {
-width: 100%; height: 50px;
-font-size: 13px;
-background: var(–blue) !important;
-color: var(–white) !important;
-border: none !important;
-border-left: none !important;
-}
-.rec-box { margin: 16px 12px 10px; }
-.pricing-box { padding: 20px 16px; }
-.specialist-box { padding: 20px 16px; }
-.hero { padding: 48px 20px 36px; }
-.hero h1 { font-size: 28px; }
+  .step-body { padding: 24px 16px 0; }
+  .options { margin: 16px auto 0; }
+  .step-nav { padding: 16px 16px 24px; }
+  .area-pills { gap: 5px; }
+  .intake-row { flex-direction: column; max-width: 100%; margin: 0 20px; border: none; gap: 8px; }
+  .intake-select-wrap { width: 100%; border: 1.5px solid rgba(255,255,255,0.25); border-radius: 0; }
+  .intake-select-wrap select { height: 50px; font-size: 15px; }
+  .btn-get-started {
+    width: 100%; height: 50px;
+    font-size: 13px;
+    background: var(--blue) !important;
+    color: var(--white) !important;
+    border: none !important;
+    border-left: none !important;
+  }
+  .rec-box { margin: 16px 12px 10px; }
+  .pricing-box { padding: 20px 16px; }
+  .specialist-box { padding: 20px 16px; }
+  .hero { padding: 48px 20px 36px; }
+  .hero h1 { font-size: 28px; }
 }
 </style>
-
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w66bgrob7d");</script>
-
 </head>
 <body>
 
@@ -205,7 +202,6 @@ border-left: none !important;
 </nav>
 
 <!-- HERO -->
-
 <div class="hero" id="page-top">
   <div class="hero-eyebrow">Serving Snohomish County</div>
   <h1>Which AC System Is<br>Right for Your Home?</h1>
@@ -233,160 +229,156 @@ border-left: none !important;
 </div>
 
 <!-- CALCULATOR -->
-
 <div class="calc-wrap">
   <div class="calc-card" id="calc-card">
 
-```
-<div class="progress-bar">
-  <div class="prog-seg active" id="seg-1"></div>
-  <div class="prog-seg" id="seg-2"></div>
-  <div class="prog-seg" id="seg-3"></div>
-  <div class="prog-seg" id="seg-4"></div>
-  <div class="prog-label" id="prog-label">Question 1 of 4</div>
-</div>
-
-<!-- STEP 1: Stories -->
-<div class="step-panel active" id="step-1">
-  <div class="step-body">
-    <div class="step-q">Is your home single or multi-story?</div>
-    <div class="options">
-      <button class="opt" onclick="pickAndAdvance(this,1,'single','Single story',2)"><div class="opt-label">Single story</div></button>
-      <button class="opt" onclick="pickAndAdvance(this,1,'multi','Two story or more',2)"><div class="opt-label">Two story or more</div></button>
-      <button class="opt" onclick="pickAndAdvance(this,1,'split','Split level',2)"><div class="opt-label">Split level</div></button>
-    </div>
-  </div>
-</div>
-
-<!-- STEP 2: Ductwork -->
-<div class="step-panel" id="step-2">
-  <div class="step-body">
-    <div class="step-q">Does your home have existing ductwork?</div>
-    <div class="options">
-      <button class="opt" onclick="pickAndAdvance(this,2,'yes','Yes — has vents throughout',3)"><div class="opt-label">Yes — has vents throughout</div></button>
-      <button class="opt" onclick="pickAndAdvance(this,2,'no','No — no existing ductwork',3)"><div class="opt-label">No — no existing ductwork</div></button>
-      <button class="opt" onclick="pickAndAdvance(this,2,'not-sure','Not sure',3)"><div class="opt-label">Not sure</div></button>
-    </div>
-    <div class="step-nav">
-      <button class="btn-back" onclick="goTo(1)">&#8592; Back</button>
-    </div>
-  </div>
-</div>
-
-<!-- STEP 3: Size -->
-<div class="step-panel" id="step-3">
-  <div class="step-body">
-    <div class="step-q">How big is your home?</div>
-    <div class="options">
-      <button class="opt" onclick="pickAndAdvance(this,3,'u1500','Under 1,500 sqft',4)"><div class="opt-label">Under 1,500 sqft</div></button>
-      <button class="opt" onclick="pickAndAdvance(this,3,'1500-2500','1,500 – 2,500 sqft',4)"><div class="opt-label">1,500 – 2,500 sqft</div></button>
-      <button class="opt" onclick="pickAndAdvance(this,3,'2500-3500','2,500 – 3,500 sqft',4)"><div class="opt-label">2,500 – 3,500 sqft</div></button>
-      <button class="opt" onclick="pickAndAdvance(this,3,'o3500','Over 3,500 sqft',4)"><div class="opt-label">Over 3,500 sqft</div></button>
-    </div>
-    <div class="step-nav">
-      <button class="btn-back" onclick="goTo(2)">&#8592; Back</button>
-    </div>
-  </div>
-</div>
-
-<!-- STEP 4: City -->
-<div class="step-panel" id="step-4">
-  <div class="step-body">
-    <div class="step-q">Which city are you in?</div>
-    <select class="city-select" id="city-select" onchange="pickCity(this.value)">
-      <option value="">Select your city...</option>
-      <option>Mill Creek</option><option>Bothell</option><option>Lynnwood</option><option>Mukilteo</option>
-      <option>Kenmore</option><option>Mountlake Terrace</option><option>Edmonds</option><option>Shoreline</option>
-      <option>Woodinville</option><option>Brier</option><option>Everett</option><option>Marysville</option>
-      <option>Monroe</option><option>Snohomish</option><option>Arlington</option><option>Lake Stevens</option>
-      <option>Martha Lake</option><option>Maltby</option><option>Other nearby area</option>
-    </select>
-    <div class="city-msg" id="city-msg"></div>
-    <div class="step-nav">
-      <button class="btn-back" onclick="goTo(3)">&#8592; Back</button>
-      <button class="btn-continue" id="next-4" disabled onclick="showLoading()">Get My Recommendation &#8594;</button>
-    </div>
-  </div>
-</div>
-
-<!-- LOADING -->
-<div class="loading-panel" id="loading">
-  <div class="loading-msg">Finding the right system<br>for your home...</div>
-  <div class="bar-track"><div class="bar-fill" id="bar-fill"></div></div>
-  <div class="bar-pct" id="bar-pct">0%</div>
-</div>
-
-<!-- RESULT -->
-<div class="result-panel" id="result-panel">
-
-  <!-- RECOMMENDATION -->
-  <div class="rec-box">
-    <div class="rec-verdict" id="rec-verdict"></div>
-    <div class="rec-sub" id="rec-sub"></div>
-    <div class="rec-why" id="rec-why"></div>
-  </div>
-
-  <!-- PRICING -->
-  <div class="pricing-box" id="pricing-box">
-    <div class="pricing-heading" id="pricing-heading">Typical Installation Cost in Your Area</div>
-    <div class="pricing-col">
-      <div class="pricing-col-label">Install Range</div>
-      <div class="pricing-col-val" id="pricing-val"></div>
-    </div>
-    <div class="pricing-asterisk">*Includes potential rebates &amp; tax credits. Your specialist can confirm eligibility.</div>
-  </div>
-
-  <!-- SPECIALIST -->
-  <div class="specialist-box" id="specialist-box">
-    <div class="specialist-availability"><div class="pulse-green"></div>Technician Available</div>
-    <div class="specialist-response-time">Response within 30 minutes</div>
-    <div class="specialist-credentials">Licensed &amp; insured &nbsp;&middot;&nbsp; Snohomish County</div>
-    <div class="specialist-stars"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rated">36 reviews</span></div>
-    <div class="specialist-validator">Speak with a technician to confirm the right system and get an exact estimate for your home.</div>
-    <div id="cta-box" style="text-align:center;">
-      <button class="btn-unlock" onclick="showForm()">Connect Me &#8594;</button>
-      <div class="antispam">You'll only hear from one recommended local technician &#8212; no spam, no multiple calls.</div>
+    <div class="progress-bar">
+      <div class="prog-seg active" id="seg-1"></div>
+      <div class="prog-seg" id="seg-2"></div>
+      <div class="prog-seg" id="seg-3"></div>
+      <div class="prog-seg" id="seg-4"></div>
+      <div class="prog-label" id="prog-label">Question 1 of 4</div>
     </div>
 
-    <!-- FORM inline -->
-    <div id="form-section" style="display:none;margin-top:20px;border-top:1px solid var(--border);padding-top:20px;">
-      <input type="text" id="h-pot" name="h-pot" style="display:none;position:absolute;left:-9999px;" tabindex="-1" autocomplete="off">
-      <div class="form-field">
-        <input type="text" id="f-name" placeholder="Your name" autocomplete="given-name" oninput="clearFErr('f-name')">
-        <div id="f-name-err" style="font-size:11px;color:#E74C3C;min-height:16px;"></div>
+    <!-- STEP 1: Stories -->
+    <div class="step-panel active" id="step-1">
+      <div class="step-body">
+        <div class="step-q">Is your home single or multi-story?</div>
+        <div class="options">
+          <button class="opt" onclick="pickAndAdvance(this,1,'single','Single story',2)"><div class="opt-label">Single story</div></button>
+          <button class="opt" onclick="pickAndAdvance(this,1,'multi','Two story or more',2)"><div class="opt-label">Two story or more</div></button>
+          <button class="opt" onclick="pickAndAdvance(this,1,'split','Split level',2)"><div class="opt-label">Split level</div></button>
+        </div>
       </div>
-      <div class="form-field">
-        <input type="tel" id="f-phone" placeholder="Best number to reach you" autocomplete="tel" inputmode="numeric" oninput="clearFErr('f-phone')">
-        <div id="f-phone-err" style="font-size:11px;color:#E74C3C;min-height:16px;"></div>
-      </div>
-      <div class="form-field">
-        <input type="email" id="f-email" placeholder="Email (optional)" autocomplete="email">
-      </div>
-      <div style="display:flex;align-items:flex-start;gap:10px;margin:10px 0 18px;">
-        <input type="checkbox" id="f-agree" onchange="toggleSubmit()" style="width:18px;height:18px;flex-shrink:0;margin-top:2px;accent-color:#27AE60;cursor:pointer;">
-        <label style="font-size:12px;color:#8AAFC8;line-height:1.6;cursor:pointer;" for="f-agree">I agree to be contacted by a local technician. Pricing shown is an estimate.</label>
-      </div>
-      <button class="btn-submit" id="btn-submit" disabled onclick="submitForm()">Request a Callback</button>
     </div>
-  </div>
 
-  <button id="btn-restart" onclick="restartCalc()">&#8592; Start over</button>
+    <!-- STEP 2: Ductwork -->
+    <div class="step-panel" id="step-2">
+      <div class="step-body">
+        <div class="step-q">Does your home have existing ductwork?</div>
+        <div class="options">
+          <button class="opt" onclick="pickAndAdvance(this,2,'yes','Yes — has vents throughout',3)"><div class="opt-label">Yes — has vents throughout</div></button>
+          <button class="opt" onclick="pickAndAdvance(this,2,'no','No — no existing ductwork',3)"><div class="opt-label">No — no existing ductwork</div></button>
+          <button class="opt" onclick="pickAndAdvance(this,2,'not-sure','Not sure',3)"><div class="opt-label">Not sure</div></button>
+        </div>
+        <div class="step-nav">
+          <button class="btn-back" onclick="goTo(1)">&#8592; Back</button>
+        </div>
+      </div>
+    </div>
 
-</div><!-- /result-panel -->
+    <!-- STEP 3: Size -->
+    <div class="step-panel" id="step-3">
+      <div class="step-body">
+        <div class="step-q">How big is your home?</div>
+        <div class="options">
+          <button class="opt" onclick="pickAndAdvance(this,3,'u1500','Under 1,500 sqft',4)"><div class="opt-label">Under 1,500 sqft</div></button>
+          <button class="opt" onclick="pickAndAdvance(this,3,'1500-2500','1,500 – 2,500 sqft',4)"><div class="opt-label">1,500 – 2,500 sqft</div></button>
+          <button class="opt" onclick="pickAndAdvance(this,3,'2500-3500','2,500 – 3,500 sqft',4)"><div class="opt-label">2,500 – 3,500 sqft</div></button>
+          <button class="opt" onclick="pickAndAdvance(this,3,'o3500','Over 3,500 sqft',4)"><div class="opt-label">Over 3,500 sqft</div></button>
+        </div>
+        <div class="step-nav">
+          <button class="btn-back" onclick="goTo(2)">&#8592; Back</button>
+        </div>
+      </div>
+    </div>
 
-<div class="trust-strip">
-  <div class="trust-item"><span class="trust-check">&#10003;</span> Licensed &amp; Insured</div>
-  <div class="trust-item"><span class="trust-check">&#10003;</span> Same-Day Response</div>
-  <div class="trust-item"><span class="trust-check">&#10003;</span> Free Estimates</div>
-  <div class="trust-item"><span class="trust-check">&#10003;</span> No Obligation</div>
-</div>
-```
+    <!-- STEP 4: City -->
+    <div class="step-panel" id="step-4">
+      <div class="step-body">
+        <div class="step-q">Which city are you in?</div>
+        <select class="city-select" id="city-select" onchange="pickCity(this.value)">
+          <option value="">Select your city...</option>
+          <option>Mill Creek</option><option>Bothell</option><option>Lynnwood</option><option>Mukilteo</option>
+          <option>Kenmore</option><option>Mountlake Terrace</option><option>Edmonds</option><option>Shoreline</option>
+          <option>Woodinville</option><option>Brier</option><option>Everett</option><option>Marysville</option>
+          <option>Monroe</option><option>Snohomish</option><option>Arlington</option><option>Lake Stevens</option>
+          <option>Martha Lake</option><option>Maltby</option><option>Other nearby area</option>
+        </select>
+        <div class="city-msg" id="city-msg"></div>
+        <div class="step-nav">
+          <button class="btn-back" onclick="goTo(3)">&#8592; Back</button>
+          <button class="btn-continue" id="next-4" disabled onclick="showLoading()">Get My Recommendation &#8594;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOADING -->
+    <div class="loading-panel" id="loading">
+      <div class="loading-msg">Finding the right system<br>for your home...</div>
+      <div class="bar-track"><div class="bar-fill" id="bar-fill"></div></div>
+      <div class="bar-pct" id="bar-pct">0%</div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="result-panel" id="result-panel">
+
+      <!-- RECOMMENDATION -->
+      <div class="rec-box">
+        <div class="rec-verdict" id="rec-verdict"></div>
+        <div class="rec-sub" id="rec-sub"></div>
+        <div class="rec-why" id="rec-why"></div>
+      </div>
+
+      <!-- PRICING -->
+      <div class="pricing-box" id="pricing-box">
+        <div class="pricing-heading" id="pricing-heading">Typical Installation Cost in Your Area</div>
+        <div class="pricing-col">
+          <div class="pricing-col-label">Install Range</div>
+          <div class="pricing-col-val" id="pricing-val"></div>
+        </div>
+        <div class="pricing-asterisk">*Includes potential rebates &amp; tax credits. Your specialist can confirm eligibility.</div>
+      </div>
+
+      <!-- SPECIALIST -->
+      <div class="specialist-box" id="specialist-box">
+        <div class="specialist-availability"><div class="pulse-green"></div>Technician Available</div>
+        <div class="specialist-response-time">Response within 30 minutes</div>
+        <div class="specialist-credentials">Licensed &amp; insured &nbsp;&middot;&nbsp; Snohomish County</div>
+        <div class="specialist-stars"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rated">36 reviews</span></div>
+        <div class="specialist-validator">Speak with a technician to confirm the right system and get an exact estimate for your home.</div>
+        <div id="cta-box" style="text-align:center;">
+          <button class="btn-unlock" onclick="showForm()">Connect Me &#8594;</button>
+          <div class="antispam">You'll only hear from one recommended local technician &#8212; no spam, no multiple calls.</div>
+        </div>
+
+        <!-- FORM inline -->
+        <div id="form-section" style="display:none;margin-top:20px;border-top:1px solid var(--border);padding-top:20px;">
+          <input type="text" id="h-pot" name="h-pot" style="display:none;position:absolute;left:-9999px;" tabindex="-1" autocomplete="off">
+          <div class="form-field">
+            <input type="text" id="f-name" placeholder="Your name" autocomplete="given-name" oninput="clearFErr('f-name')">
+            <div id="f-name-err" style="font-size:11px;color:#E74C3C;min-height:16px;"></div>
+          </div>
+          <div class="form-field">
+            <input type="tel" id="f-phone" placeholder="Best number to reach you" autocomplete="tel" inputmode="numeric" oninput="clearFErr('f-phone')">
+            <div id="f-phone-err" style="font-size:11px;color:#E74C3C;min-height:16px;"></div>
+          </div>
+          <div class="form-field">
+            <input type="email" id="f-email" placeholder="Email (optional)" autocomplete="email">
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px;margin:10px 0 18px;">
+            <input type="checkbox" id="f-agree" onchange="toggleSubmit()" style="width:18px;height:18px;flex-shrink:0;margin-top:2px;accent-color:#27AE60;cursor:pointer;">
+            <label style="font-size:12px;color:#8AAFC8;line-height:1.6;cursor:pointer;" for="f-agree">I agree to be contacted by a local technician. Pricing shown is an estimate.</label>
+          </div>
+          <button class="btn-submit" id="btn-submit" disabled onclick="submitForm()">Request a Callback</button>
+        </div>
+      </div>
+
+      <button id="btn-restart" onclick="restartCalc()">&#8592; Start over</button>
+
+    </div><!-- /result-panel -->
+
+    <div class="trust-strip">
+      <div class="trust-item"><span class="trust-check">&#10003;</span> Licensed &amp; Insured</div>
+      <div class="trust-item"><span class="trust-check">&#10003;</span> Same-Day Response</div>
+      <div class="trust-item"><span class="trust-check">&#10003;</span> Free Estimates</div>
+      <div class="trust-item"><span class="trust-check">&#10003;</span> No Obligation</div>
+    </div>
 
   </div><!-- /calc-card -->
 </div><!-- /calc-wrap -->
 
 <!-- AREA -->
-
 <div class="area-section">
   <div class="area-eyebrow">Service Area</div>
   <div class="area-pills">
@@ -602,6 +594,5 @@ function restartCalc(){
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
-
 </body>
 </html>
