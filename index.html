@@ -37,7 +37,7 @@ body { font-family: 'Roboto', sans-serif; background: var(--navy); color: var(--
 .nav-phone { font-size: 13px; font-weight: 700; color: var(--orange); text-decoration: none; }
 
 /* HERO */
-.hero { background: url('hero-bg.jpg') center center / cover no-repeat; position: relative; padding: 64px 20px 48px; text-align: center; border-bottom: 3px solid var(--accent); }
+.hero { background: url('hero-bg.jpeg') center center / cover no-repeat; position: relative; padding: 64px 20px 48px; text-align: center; border-bottom: 3px solid var(--accent); }
 .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,22,40,0.70) 0%, rgba(10,22,40,0.88) 100%); z-index: 0; }
 .hero > * { position: relative; z-index: 1; }
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: rgba(91,164,232,0.1); border: 1px solid rgba(91,164,232,0.25); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 18px; }
@@ -126,16 +126,20 @@ body { font-family: 'Roboto', sans-serif; background: var(--navy); color: var(--
 .pricing-asterisk { font-size: 11px; color: #9BB0C4; line-height: 1.6; margin-top: 14px; }
 
 /* SPECIALIST / CTA */
-.specialist-box { background: var(--white); border-top: 1px solid var(--border); padding: 24px 22px; text-align: center; }
-.specialist-availability { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: var(--green); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+.specialist-box { background: var(--white); border-top: 1px solid var(--border); padding: 28px 22px; text-align: center; }
+.specialist-availability { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: var(--green); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
 .pulse-green { width: 7px; height: 7px; background: var(--green); border-radius: 50%; animation: pulse 1.8s infinite; flex-shrink: 0; }
-.specialist-response-time { font-family: 'Roboto Slab', serif; font-size: 22px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
-.specialist-credentials { font-size: 13px; font-weight: 500; color: var(--muted); margin-bottom: 16px; }
-.specialist-stars { font-size: 15px; font-weight: 700; letter-spacing: 1px; margin-bottom: 18px; }
-.specialist-stars .stars { color: #F4B942; }
-.specialist-stars .rated { color: var(--blue); font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 13px; margin-left: 4px; }
-.specialist-validator { font-family: 'Roboto Slab', serif; font-size: 15px; font-weight: 700; color: var(--navy); text-align: center; line-height: 1.4; margin-bottom: 18px; padding: 0 8px; }
-.btn-unlock { width: 100%; background: var(--green); border: none; border-radius: 0; padding: 16px; font-size: 15px; font-weight: 700; color: var(--white); cursor: pointer; font-family: 'Roboto', sans-serif; margin-bottom: 10px; transition: background 0.15s; text-transform: uppercase; letter-spacing: 0.5px; }
+.specialist-meta { font-size: 12px; color: var(--muted); margin-bottom: 20px; line-height: 1.7; }
+.specialist-meta .stars { color: #F4B942; }
+.specialist-meta .rated { color: var(--blue); font-weight: 700; }
+.specialist-validator { font-size: 14px; color: var(--dim); line-height: 1.6; margin-bottom: 22px; padding: 0 8px; }
+.btn-unlock {
+  width: 100%; background: var(--green); border: none; border-radius: 0;
+  padding: 20px; font-size: 17px; font-weight: 700;
+  color: var(--white); cursor: pointer; font-family: 'Roboto', sans-serif;
+  margin-bottom: 12px; transition: background 0.15s;
+  text-transform: uppercase; letter-spacing: 1px;
+}
 .btn-unlock:hover { background: #219A52; }
 .antispam { font-size: 11px; color: #9BB0C4; text-align: center; margin-bottom: 6px; line-height: 1.5; }
 
@@ -332,14 +336,12 @@ body { font-family: 'Roboto', sans-serif; background: var(--navy); color: var(--
 
       <!-- SPECIALIST -->
       <div class="specialist-box" id="specialist-box">
-        <div class="specialist-availability"><div class="pulse-green"></div>Technician Available</div>
-        <div class="specialist-response-time">Response within 30 minutes</div>
-        <div class="specialist-credentials">Licensed &amp; insured &nbsp;&middot;&nbsp; Snohomish County</div>
-        <div class="specialist-stars"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rated">36 reviews</span></div>
-        <div class="specialist-validator">Speak with a technician to confirm the right system and get an exact estimate for your home.</div>
+        <div class="specialist-availability"><div class="pulse-green"></div>Technician Available &nbsp;&middot;&nbsp; 30 min response</div>
+        <div class="specialist-meta">Licensed &amp; insured &nbsp;&middot;&nbsp; <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="rated">36 reviews</span> &nbsp;&middot;&nbsp; Snohomish County</div>
+        <div class="specialist-validator">Speak with an installer to confirm the right system and get an exact estimate for your home.</div>
         <div id="cta-box" style="text-align:center;">
           <button class="btn-unlock" onclick="showForm()">Connect Me &#8594;</button>
-          <div class="antispam">You'll only hear from one recommended local technician &#8212; no spam, no multiple calls.</div>
+          <div class="antispam">You'll only hear from one recommended local specialist &#8212; no spam, no multiple calls.</div>
         </div>
 
         <!-- FORM inline -->
